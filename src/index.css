@@ -2,41 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Design system for modern Christian theology landing page. 
+All colors MUST be HSL. Sophisticated color palette with sacred symbolism.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - Clean white backgrounds with warm undertones */
+    --background: 0 0% 99%;
+    --foreground: 213 31% 19%;
 
+    /* Card and surface colors - Subtle elevation */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 213 31% 19%;
 
+    /* Popover surfaces */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 213 31% 19%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep theological blue representing wisdom and divinity */
+    --primary: 213 94% 17%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 213 94% 25%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Elegant sage representing peace and contemplation */
+    --secondary: 210 15% 94%;
+    --secondary-foreground: 213 31% 19%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted tones for subtle backgrounds */
+    --muted: 210 15% 96%;
+    --muted-foreground: 213 19% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Sacred gold representing divine light and enlightenment */
+    --accent: 45 93% 47%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 45 93% 55%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Warm accent for special highlights */
+    --warm-accent: 25 90% 48%;
+    --warm-accent-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Destructive colors */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
 
-    --radius: 0.5rem;
+    /* Borders and inputs */
+    --border: 213 27% 84%;
+    --input: 213 27% 84%;
+    --ring: 213 94% 17%;
+
+    /* Sacred gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-divine: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--warm-accent)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)), hsl(var(--accent)));
+
+    /* Shadows with divine light effect */
+    --shadow-divine: 0 10px 40px -10px hsl(var(--accent) / 0.3);
+    --shadow-primary: 0 10px 30px -10px hsl(var(--primary) / 0.2);
+    --shadow-elevation: 0 4px 20px -4px hsl(var(--primary) / 0.1);
+
+    /* Animation variables */
+    --transition-divine: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +130,51 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* Sacred animations and microinteractions */
+  .divine-glow {
+    @apply transition-shadow duration-500 hover:shadow-[0_0_30px_hsl(var(--accent)/0.4)];
+  }
+  
+  .sacred-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_hsl(var(--primary)/0.2)];
+  }
+  
+  .text-gradient-divine {
+    @apply bg-gradient-to-r from-accent to-warm-accent bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-divine {
+    background: var(--gradient-divine);
+  }
+  
+  .bg-gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  /* Typography enhancements */
+  .heading-divine {
+    @apply text-4xl md:text-6xl font-bold leading-tight tracking-tight;
+  }
+  
+  .subheading-sacred {
+    @apply text-xl md:text-2xl font-medium text-muted-foreground leading-relaxed;
+  }
+  
+  /* Card hover effects */
+  .card-sacred {
+    @apply bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-[0_8px_30px_hsl(var(--primary)/0.1)] hover:border-accent/20;
   }
 }
