@@ -4,7 +4,7 @@ import heroImage from "@/assets/theology-hero.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background with overlay */}
       <div className="absolute inset-0">
         <img 
@@ -12,7 +12,7 @@ const HeroSection = () => {
           alt="Sacred divine light representing theological wisdom"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-accent/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-accent/50"></div>
       </div>
       
       {/* Floating particles effect */}
