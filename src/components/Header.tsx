@@ -1,9 +1,16 @@
 import { Button } from "@/components/ui/button";
-import { Search, Menu, X } from "lucide-react";
+import { Home, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { NavBar } from "@/components/ui/tubelight-navbar";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { ThemesDropdown } from "@/components/ThemesDropdown";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navItems = [
+    { name: 'Home', url: '#', icon: Home }
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -16,18 +23,12 @@ const Header = () => {
             </h1>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Button variant="ghost" className="text-foreground hover:text-accent">
-              Home
-            </Button>
-            <Button variant="ghost" className="text-foreground hover:text-accent">
-              Temas
-            </Button>
-            <Button variant="ghost" size="icon" className="text-foreground hover:text-accent">
-              <Search className="w-5 h-5" />
-            </Button>
-          </nav>
+          {/* Desktop Navigation with Tubelight Navbar */}
+          <div className="hidden md:flex items-center space-x-8">
+            <NavBar items={navItems} className="relative top-0 left-0 transform-none mb-0 pt-0" />
+            <ThemesDropdown />
+            <ThemeToggle />
+          </div>
 
           {/* Mobile Menu Button */}
           <Button
@@ -47,13 +48,12 @@ const Header = () => {
               <Button variant="ghost" className="w-full justify-start text-foreground hover:text-accent">
                 Home
               </Button>
-              <Button variant="ghost" className="w-full justify-start text-foreground hover:text-accent">
-                Temas
-              </Button>
-              <Button variant="ghost" className="w-full justify-start text-foreground hover:text-accent">
-                <Search className="w-5 h-5 mr-2" />
-                Pesquisa
-              </Button>
+              <div className="px-4">
+                <ThemesDropdown />
+              </div>
+              <div className="px-4">
+                <ThemeToggle />
+              </div>
             </div>
           </div>
         )}
