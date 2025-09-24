@@ -24,9 +24,11 @@ const Header = () => {
             </h1>
           </div>
 
-          {/* Desktop Navigation with Tubelight Navbar */}
-          <div className="hidden md:flex items-center space-x-6">
-            <NavBar items={navItems} className="relative top-0 left-0 transform-none mb-0 pt-0" />
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Button variant="ghost" className="text-foreground hover:text-accent">
+              Home
+            </Button>
             <ThemesDropdown />
             <SearchComponent />
             <ThemeToggle />
