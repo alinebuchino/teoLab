@@ -4,6 +4,7 @@ import { useState } from "react";
 import { NavBar } from "@/components/ui/tubelight-navbar";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ThemesDropdown } from "@/components/ThemesDropdown";
+import SearchComponent from "@/components/ui/animated-glowing-search-bar";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,9 +25,10 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation with Tubelight Navbar */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <NavBar items={navItems} className="relative top-0 left-0 transform-none mb-0 pt-0" />
             <ThemesDropdown />
+            <SearchComponent />
             <ThemeToggle />
           </div>
 
@@ -50,6 +52,9 @@ const Header = () => {
               </Button>
               <div className="px-4">
                 <ThemesDropdown />
+              </div>
+              <div className="px-4 py-2">
+                <SearchComponent />
               </div>
               <div className="px-4">
                 <ThemeToggle />
