@@ -2,11 +2,25 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { LampContainer } from "@/components/ui/lamp";
 import { motion } from "framer-motion";
+import heroImage from "@/assets/theology-hero.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative pt-16">
-      <LampContainer>
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div className="absolute inset-0 bg-background/80" />
+      </div>
+      
+      <LampContainer className="relative z-10">
         <motion.div
           initial={{ opacity: 0.5, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
