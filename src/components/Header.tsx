@@ -1,16 +1,20 @@
 import { Button } from "@/components/ui/button";
-import { Home, Menu, X } from "lucide-react";
+import { Home, Menu, X, BookOpen, Users, Mail } from "lucide-react";
 import { useState } from "react";
 import { NavBar } from "@/components/ui/tubelight-navbar";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ThemesDropdown } from "@/components/ThemesDropdown";
 import SearchComponent from "@/components/ui/animated-glowing-search-bar";
+import { InteractiveMenu, InteractiveMenuItem } from "@/components/ui/modern-mobile-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = [
-    { name: 'Home', url: '#', icon: Home }
+  const menuItems: InteractiveMenuItem[] = [
+    { label: 'Home', icon: Home },
+    { label: 'Temas', icon: BookOpen },
+    { label: 'Comunidade', icon: Users },
+    { label: 'Contato', icon: Mail },
   ];
 
   return (
@@ -25,11 +29,8 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="text-foreground hover:text-accent">
-              Home
-            </Button>
-            <ThemesDropdown />
+          <div className="hidden md:flex items-center space-x-6">
+            <InteractiveMenu items={menuItems} accentColor="hsl(var(--accent))" />
             <SearchComponent />
             <ThemeToggle />
           </div>
