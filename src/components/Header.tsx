@@ -13,8 +13,6 @@ const Header = () => {
   const menuItems: InteractiveMenuItem[] = [
     { label: 'Home', icon: Home },
     { label: 'Temas', icon: BookOpen },
-    { label: 'Comunidade', icon: Users },
-    { label: 'Contato', icon: Mail },
   ];
 
   return (
