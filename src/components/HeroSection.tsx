@@ -7,20 +7,7 @@ import heroImage from "@/assets/theology-hero.jpg";
 const HeroSection = () => {
   return (
     <section className="relative pt-16">
-      {/* Background image */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        <div className="absolute inset-0 bg-background/80" />
-      </div>
-      
-      <LampContainer className="relative z-10">
+      <LampContainer backgroundImage={heroImage}>
         <motion.div
           initial={{ opacity: 0.5, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}

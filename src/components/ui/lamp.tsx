@@ -6,17 +6,26 @@ import { cn } from "@/lib/utils";
 export const LampContainer = ({
   children,
   className,
+  backgroundImage,
 }: {
   children: React.ReactNode;
   className?: string;
+  backgroundImage?: string;
 }) => {
   return (
     <div
       className={cn(
-        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-background w-full rounded-md z-0",
+        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden w-full rounded-md z-0",
         className
       )}
+      style={backgroundImage ? {
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      } : { backgroundColor: 'var(--background)' }}
     >
+      {backgroundImage && <div className="absolute inset-0 bg-background/70 z-0" />}
       <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 ">
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
