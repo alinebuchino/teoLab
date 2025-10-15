@@ -3,7 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import ThemesSection from "@/components/ThemesSection";
 import ArticlesSection from "@/components/ArticlesSection";
 import ResourcesSection from "@/components/ResourcesSection";
-import NewsletterSection from "@/components/NewsletterSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -14,7 +13,6 @@ const Index = () => {
       <ThemesSection />
       <ArticlesSection />
       <ResourcesSection />
-      <NewsletterSection />
       <Footer />
     </div>
   );

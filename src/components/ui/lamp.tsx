@@ -72,16 +72,6 @@ export const LampContainer = ({
           }}
           className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-accent-glow blur-2xl"
         ></motion.div>
-        <motion.div
-          initial={{ width: "20rem" }}
-          whileInView={{ width: "40rem" }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="absolute inset-auto z-50 h-0.5 w-[40rem] -translate-y-[7rem] bg-accent-glow opacity-0"
-        ></motion.div>
 
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-background "></div>
       </div>
