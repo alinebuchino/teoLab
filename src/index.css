@@ -229,7 +229,7 @@ All colors MUST be HSL. Sophisticated color palette with sacred symbolism.
   }
 
   .menu__text {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-weight: 500;
     color: var(--component-inactive-color);
     transition: all 0.3s ease;

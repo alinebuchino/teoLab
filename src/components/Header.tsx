@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Home, Menu, X, BookOpen, Users, Mail } from "lucide-react";
+import { Home, Menu, X, BookOpen, Newspaper, Library } from "lucide-react";
 import { useState } from "react";
 import { NavBar } from "@/components/ui/tubelight-navbar";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -10,9 +10,25 @@ import { InteractiveMenu, InteractiveMenuItem } from "@/components/ui/modern-mob
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const headerOffset = 80;
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   const menuItems: InteractiveMenuItem[] = [
-    { label: 'Home', icon: Home },
-    { label: 'Temas', icon: BookOpen },
+    { label: 'Home', icon: Home, onClick: () => window.scrollTo({ top: 0, behavior: 'smooth' }) },
+    { label: 'Temas', icon: BookOpen, onClick: () => scrollToSection('themes-section') },
+    { label: 'Recentes', icon: Newspaper, onClick: () => scrollToSection('articles-section') },
+    { label: 'Recursos', icon: Library, onClick: () => scrollToSection('resources-section') },
   ];
 
   return (

@@ -46,10 +46,11 @@ const ThemesSection = () => {
   ];
 
   return (
-    <BackgroundPaths 
-      title="Temas Teológicos"
-      subtitle="Mergulhe em estudos profundos que fortalecem sua compreensão da fé cristã e edificam sua vida espiritual."
-    >
+    <section id="themes-section">
+      <BackgroundPaths 
+        title="Temas Teológicos"
+        subtitle="Mergulhe em estudos profundos que fortalecem sua compreensão da fé cristã e edificam sua vida espiritual."
+      >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {themes.map((theme, index) => (
           <div 
@@ -61,7 +62,8 @@ const ThemesSection = () => {
           </div>
         ))}
       </div>
-    </BackgroundPaths>
+      </BackgroundPaths>
+    </section>
   );
 };
 
