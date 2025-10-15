@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-full bg-gradient-divine flex items-center justify-center">
                 <Cross className="w-5 h-5 text-accent-foreground" />
               </div>
-              <h3 className="text-2xl font-bold">Teologia Cristã</h3>
+              <h3 className="text-2xl font-bold">TeoLab</h3>
             </div>
             <p className="text-primary-foreground/80 leading-relaxed max-w-md">
               Dedicados ao estudo profundo e à proclamação das verdades bíblicas que transformam vidas e edificam a Igreja de Cristo.
@@ -86,7 +86,7 @@ const Footer = () => {
             
             <div className="flex items-center gap-1 text-sm text-primary-foreground/70">
               <Book className="w-4 h-4" />
-              <span>© {currentYear} Teologia Cristã. Soli Deo Gloria.</span>
+              <span>© {currentYear} TeoLab. Soli Deo Gloria.</span>
             </div>
           </div>
         </div>

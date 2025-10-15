@@ -38,7 +38,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <h1 className="text-xl font-bold text-foreground">
-              Teologia <span className="text-accent">Cristã</span>
+              Teo<span className="text-accent">Lab</span>
             </h1>
           </div>
 
