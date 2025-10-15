@@ -80,7 +80,7 @@ export const LampContainer = ({
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="absolute inset-auto z-50 h-0.5 w-[40rem] -translate-y-[7rem] bg-accent-glow "
+          className="absolute inset-auto z-50 h-0.5 w-[40rem] -translate-y-[7rem] bg-accent-glow opacity-0"
         ></motion.div>
 
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-background "></div>
