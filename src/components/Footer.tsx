@@ -1,4 +1,5 @@
 import { Heart, Book, Cross } from "lucide-react";
+import teolabLogo from "@/assets/teolab-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,9 +11,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-divine flex items-center justify-center">
-                <Cross className="w-5 h-5 text-accent-foreground" />
-              </div>
+              <img src={teolabLogo} alt="TeoLab" className="w-10 h-10 object-contain" />
               <h3 className="text-2xl font-bold">TeoLab</h3>
             </div>
             <p className="text-primary-foreground/80 leading-relaxed max-w-md">

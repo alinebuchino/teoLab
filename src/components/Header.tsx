@@ -6,6 +6,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { ThemesDropdown } from "@/components/ThemesDropdown";
 import SearchComponent from "@/components/ui/animated-glowing-search-bar";
 import { InteractiveMenu, InteractiveMenuItem } from "@/components/ui/modern-mobile-menu";
+import teolabLogo from "@/assets/teolab-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +37,8 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-2">
+            <img src={teolabLogo} alt="TeoLab" className="w-8 h-8 object-contain" />
             <h1 className="text-xl font-bold text-foreground">
               Teo<span className="text-accent">Lab</span>
             </h1>

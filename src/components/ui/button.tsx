@@ -16,7 +16,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-muted hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         divine: "bg-gradient-to-r from-accent to-warm-accent text-accent-foreground hover:shadow-[0_10px_30px_hsl(var(--accent)/0.4)] transform hover:scale-105 hover:shadow-lg",
-        sacred: "bg-primary text-primary-foreground border border-accent/20 hover:bg-primary-glow hover:border-accent hover:shadow-[0_8px_25px_hsl(var(--primary)/0.3)] transform hover:scale-105",
+        sacred: "bg-primary text-primary-foreground border border-accent/20 hover:bg-primary-glow hover:text-primary-foreground hover:border-accent hover:shadow-[0_8px_25px_hsl(var(--primary)/0.3)] transform hover:scale-105",
         hero: "bg-gradient-to-r from-primary via-primary-glow to-accent text-primary-foreground hover:shadow-[0_15px_40px_hsl(var(--accent)/0.4)] transform hover:scale-105 hover:shadow-2xl",
       },
       size: {
