@@ -1,8 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
+import heroImage from "@/assets/theology-hero.jpg";
 import { LampContainer } from "@/components/ui/lamp";
 import { motion } from "framer-motion";
-import heroImage from "@/assets/theology-hero.jpg";
+import { ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -22,19 +21,10 @@ const HeroSection = () => {
             <span className="block text-foreground">Explorando a</span>
             <span className="text-gradient-divine block mt-2">Teologia Cristã</span>
           </h1>
-          
+
           <p className="subheading-sacred mb-8 max-w-2xl mx-auto">
             Mergulhe em estudos profundos sobre doutrina, história da igreja e fundamentos bíblicos que transformam vidas e edificam a fé cristã.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="default" size="lg" className="min-w-[200px] bg-accent hover:bg-accent-glow">
-              Começar Jornada
-            </Button>
-            <Button variant="outline" size="lg" className="min-w-[200px]">
-              Explorar Temas
-            </Button>
-          </div>
         </motion.div>
       </LampContainer>
 

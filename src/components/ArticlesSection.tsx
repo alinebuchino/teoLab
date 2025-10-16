@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 const ArticlesSection = () => {
   const articles = [
@@ -58,7 +58,7 @@ const ArticlesSection = () => {
                   Artigo em Destaque
                 </span>
               </div>
-              
+
               <div className="pt-16 pb-6">
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                   <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs font-medium">
@@ -73,18 +73,18 @@ const ArticlesSection = () => {
                     {articles[0].readTime}
                   </div>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-foreground mb-3 hover:text-primary transition-colors cursor-pointer">
                   {articles[0].title}
                 </h3>
-                
+
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {articles[0].excerpt}
                 </p>
-                
-                <Button variant="sacred" className="group">
+
+                <Button variant="sacred" className="group hover:text-accent">
                   Ler Artigo Completo
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4" />
                 </Button>
               </div>
             </article>
@@ -92,7 +92,7 @@ const ArticlesSection = () => {
 
           {/* Other Articles */}
           {articles.slice(1).map((article, index) => (
-            <article 
+            <article
               key={article.title}
               className="card-sacred hover:shadow-[0_8px_30px_hsl(var(--primary)/0.1)] group cursor-pointer animate-fade-in"
               style={{ animationDelay: `${(index + 1) * 0.1}s` }}
@@ -110,15 +110,15 @@ const ArticlesSection = () => {
                   {article.readTime}
                 </div>
               </div>
-              
+
               <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                 {article.title}
               </h3>
-              
+
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 {article.excerpt}
               </p>
-              
+
               <div className="flex items-center text-accent text-sm font-medium group-hover:text-accent-glow transition-colors">
                 Continuar lendo
                 <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />

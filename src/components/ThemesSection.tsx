@@ -1,10 +1,10 @@
+import biblicalStudiesIcon from "@/assets/biblical-studies-icon.jpg";
+import christologyIcon from "@/assets/christology-icon.jpg";
+import churchHistoryIcon from "@/assets/church-history-icon.jpg";
+import doctrineIcon from "@/assets/doctrine-icon.jpg";
+import eschatologyIcon from "@/assets/eschatology-icon.jpg";
 import { BackgroundPaths } from "@/components/ui/background-paths";
 import ThemeCard from "./ThemeCard";
-import doctrineIcon from "@/assets/doctrine-icon.jpg";
-import christologyIcon from "@/assets/christology-icon.jpg";
-import eschatologyIcon from "@/assets/eschatology-icon.jpg";
-import churchHistoryIcon from "@/assets/church-history-icon.jpg";
-import biblicalStudiesIcon from "@/assets/biblical-studies-icon.jpg";
 
 const ThemesSection = () => {
   const themes = [
@@ -47,23 +47,23 @@ const ThemesSection = () => {
 
   return (
     <section id="themes-section">
-      <BackgroundPaths 
-        title="Temas Teológicos"
+      <BackgroundPaths
+        title={`Temas <gradient>Teológicos</gradient>`}
         subtitle="Mergulhe em estudos profundos que fortalecem sua compreensão da fé cristã e edificam sua vida espiritual."
       >
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {themes.map((theme, index) => (
-          <div 
-            key={theme.title}
-            className="animate-fade-in"
-            style={{ animationDelay: `${index * 0.1}s` }}
-          >
-            <ThemeCard {...theme} />
-          </div>
-        ))}
-      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {themes.map((theme, index) => (
+            <div
+              key={theme.title}
+              className="animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <ThemeCard {...theme} />
+            </div>
+          ))}
+        </div>
       </BackgroundPaths>
-    </section>
+    </section >
   );
 };
 
