@@ -7,6 +7,7 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
+import { DialogTitle } from "@/components/ui/dialog";
 import { Book, Newspaper, Library, FileText } from "lucide-react";
 import { searchableContent, SearchableItem } from "@/data/searchData";
 
@@ -26,14 +27,6 @@ const normalizeText = (text: string): string => {
 const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredResults, setFilteredResults] = useState<SearchableItem[]>([]);
-
-  // Resetar pesquisa quando o dialog fechar
-  useEffect(() => {
-    if (!open) {
-      setSearchQuery("");
-      setFilteredResults([]);
-    }
-  }, [open]);
 
   useEffect(() => {
     if (searchQuery.trim() === "") {
@@ -118,6 +111,7 @@ const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
 
   return (
     <CommandDialog open={open} onOpenChange={onOpenChange}>
+      <DialogTitle className="sr-only">Pesquisar conteúdo</DialogTitle>
       <CommandInput
         placeholder="Pesquisar artigos, temas, recursos..."
         value={searchQuery}
