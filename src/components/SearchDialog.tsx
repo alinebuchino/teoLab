@@ -15,9 +15,25 @@ interface SearchDialogProps {
   onOpenChange: (open: boolean) => void;
 }
 
+// Função para normalizar texto (remover acentos e converter para minúscula)
+const normalizeText = (text: string): string => {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+};
+
 const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredResults, setFilteredResults] = useState<SearchableItem[]>([]);
+
+  // Resetar pesquisa quando o dialog fechar
+  useEffect(() => {
+    if (!open) {
+      setSearchQuery("");
+      setFilteredResults([]);
+    }
+  }, [open]);
 
   useEffect(() => {
     if (searchQuery.trim() === "") {
@@ -25,13 +41,13 @@ const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
       return;
     }
 
-    const query = searchQuery.toLowerCase();
+    const query = normalizeText(searchQuery);
     const results = searchableContent.filter((item) => {
-      const titleMatch = item.title.toLowerCase().includes(query);
-      const descriptionMatch = item.description.toLowerCase().includes(query);
-      const categoryMatch = item.category.toLowerCase().includes(query);
+      const titleMatch = normalizeText(item.title).includes(query);
+      const descriptionMatch = normalizeText(item.description).includes(query);
+      const categoryMatch = normalizeText(item.category).includes(query);
       const keywordsMatch = item.keywords?.some((keyword) =>
-        keyword.toLowerCase().includes(query)
+        normalizeText(keyword).includes(query)
       );
 
       return titleMatch || descriptionMatch || categoryMatch || keywordsMatch;
