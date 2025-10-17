@@ -1,8 +1,12 @@
 import React from 'react';
 
-const SearchComponent = () => {
+interface SearchComponentProps {
+  onClick?: () => void;
+}
+
+const SearchComponent = ({ onClick }: SearchComponentProps) => {
   return (
-    <div className="relative flex items-center justify-center">
+    <div className="relative flex items-center justify-center cursor-pointer" onClick={onClick}>
       <div className="absolute z-[-1] w-full h-min-screen"></div>
       <div id="poda" className="relative flex items-center justify-center group scale-75">
         <div className="absolute z-[-1] overflow-hidden h-full w-full max-h-[50px] max-w-[240px] rounded-xl blur-[3px]
@@ -38,11 +42,12 @@ const SearchComponent = () => {
                         before:transition-all before:duration-2000 group-hover:before:rotate-[-110deg] group-focus-within:before:rotate-[430deg] group-focus-within:before:duration-[4000ms]">
         </div>
 
-        <div id="main" className="relative group">
+        <div id="main" className="relative group pointer-events-none">
           <input 
             placeholder="Pesquisar..." 
             type="text" 
             name="text" 
+            readOnly
             className="bg-background border border-border/20 w-[230px] h-[42px] rounded-lg text-foreground px-[45px] text-sm focus:outline-none placeholder-muted-foreground focus:border-accent/50 transition-colors" 
           />
           <div id="input-mask" className="pointer-events-none w-[80px] h-[16px] absolute bg-gradient-to-r from-transparent to-background top-[13px] left-[55px] group-focus-within:hidden"></div>

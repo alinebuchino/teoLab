@@ -5,11 +5,13 @@ import { NavBar } from "@/components/ui/tubelight-navbar";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ThemesDropdown } from "@/components/ThemesDropdown";
 import SearchComponent from "@/components/ui/animated-glowing-search-bar";
+import SearchDialog from "@/components/SearchDialog";
 import { InteractiveMenu, InteractiveMenuItem } from "@/components/ui/modern-mobile-menu";
 import teolabLogo from "@/assets/teolab-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -47,9 +49,12 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             <InteractiveMenu items={menuItems} accentColor="hsl(var(--accent))" />
-            <SearchComponent />
+            <SearchComponent onClick={() => setIsSearchOpen(true)} />
             <ThemeToggle />
           </div>
+
+          {/* Search Dialog */}
+          <SearchDialog open={isSearchOpen} onOpenChange={setIsSearchOpen} />
 
           {/* Mobile Menu Button */}
           <Button
@@ -73,7 +78,7 @@ const Header = () => {
                 <ThemesDropdown />
               </div>
               <div className="px-4 py-2">
-                <SearchComponent />
+                <SearchComponent onClick={() => setIsSearchOpen(true)} />
               </div>
               <div className="px-4">
                 <ThemeToggle />
