@@ -28,6 +28,15 @@ const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredResults, setFilteredResults] = useState<SearchableItem[]>([]);
 
+  // Resetar a busca quando o diálogo abre
+  useEffect(() => {
+    if (!open) {
+      setSearchQuery("");
+      setFilteredResults([]);
+    }
+  }, [open]);
+
+  // Filtrar resultados em tempo real
   useEffect(() => {
     if (searchQuery.trim() === "") {
       setFilteredResults([]);
