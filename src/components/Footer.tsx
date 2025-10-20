@@ -26,7 +26,7 @@ const Footer = () => {
       </div>
       <div className="border-t border-primary-foreground/20">
         <div className="max-w-7xl mx-auto px-6 py-6 text-center text-sm font-normal text-primary-foreground/70">
-          TeoLab ©{currentYear}. Todos os direitos reservados. Soli Deo Gloria.
+          TeoLab ©{currentYear}
         </div>
       </div>
     </footer>
