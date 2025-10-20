@@ -1,3 +1,4 @@
+import { Heart } from "lucide-react";
 import teolabLogo from "@/assets/teolab-logo.png";
 
 const Footer = () => {
@@ -12,10 +13,16 @@ const Footer = () => {
             alt="TeoLab" 
             className="h-11 object-contain" 
           />
+          <h2 className="text-3xl font-bold">TeoLab</h2>
         </div>
-        <p className="text-center max-w-xl text-sm font-normal leading-relaxed text-primary-foreground/80">
+        <p className="text-center max-w-xl text-sm font-normal leading-relaxed text-primary-foreground/80 mb-4">
           Dedicados ao estudo profundo e à proclamação das verdades bíblicas que transformam vidas e edificam a Igreja de Cristo.
         </p>
+        <div className="flex items-center gap-1.5 text-sm text-primary-foreground/80">
+          <span>Feito com</span>
+          <Heart className="w-4 h-4 text-warm-accent fill-warm-accent animate-divine-pulse" />
+          <span>para a glória de Deus</span>
+        </div>
       </div>
       <div className="border-t border-primary-foreground/20">
         <div className="max-w-7xl mx-auto px-6 py-6 text-center text-sm font-normal text-primary-foreground/70">
