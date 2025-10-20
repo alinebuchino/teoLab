@@ -23,8 +23,10 @@ const HeroSection = () => {
           </h1>
 
           <p className="subheading-sacred mb-8 max-w-2xl mx-auto">
-            Mergulhe em estudos profundos sobre doutrina, história da igreja e fundamentos bíblicos que transformam vidas e edificam a fé cristã.
+            Não há glória para Deus em uma fé superficial! <br /><br />
+            Quando buscamos as respostas certas com sinceridade, o estudo teológico se torna um ato de adoração que fortalece o discípulo e glorifica a Deus com a mente e com o coração.
           </p>
+
         </motion.div>
       </LampContainer>
 
@@ -32,7 +34,7 @@ const HeroSection = () => {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-50">
         <ChevronDown className="w-6 h-6 text-muted-foreground" />
       </div>
-    </section>
+    </section >
   );
 };
 
