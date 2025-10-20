@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import {
+  Command,
   CommandDialog,
   CommandEmpty,
   CommandGroup,
@@ -121,96 +122,98 @@ const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
   return (
     <CommandDialog open={open} onOpenChange={onOpenChange}>
       <DialogTitle className="sr-only">Pesquisar conteúdo</DialogTitle>
-      <CommandInput
-        placeholder="Pesquisar artigos, temas, recursos..."
-        value={searchQuery}
-        onValueChange={setSearchQuery}
-      />
-      <CommandList>
-        <CommandEmpty>Nenhum resultado encontrado.</CommandEmpty>
+      <Command shouldFilter={false}>
+        <CommandInput
+          placeholder="Pesquisar artigos, temas, recursos..."
+          value={searchQuery}
+          onValueChange={setSearchQuery}
+        />
+        <CommandList>
+          <CommandEmpty>Nenhum resultado encontrado.</CommandEmpty>
 
-        {groupedResults.articles.length > 0 && (
-          <CommandGroup heading="Artigos">
-            {groupedResults.articles.map((item) => (
-              <CommandItem
-                key={item.id}
-                onSelect={() => handleSelect(item)}
-                className="cursor-pointer"
-              >
-                <div className="flex items-start gap-3 w-full">
-                  {getIcon(item.type)}
-                  <div className="flex-1">
-                    <div className="font-medium">{item.title}</div>
-                    <div className="text-sm text-muted-foreground line-clamp-1">
-                      {item.description}
+          {groupedResults.articles.length > 0 && (
+            <CommandGroup heading="Artigos">
+              {groupedResults.articles.map((item) => (
+                <CommandItem
+                  key={item.id}
+                  onSelect={() => handleSelect(item)}
+                  className="cursor-pointer"
+                >
+                  <div className="flex items-start gap-3 w-full">
+                    {getIcon(item.type)}
+                    <div className="flex-1">
+                      <div className="font-medium">{item.title}</div>
+                      <div className="text-sm text-muted-foreground line-clamp-1">
+                        {item.description}
+                      </div>
+                      <div className="flex items-center gap-2 mt-1">
+                        <span className="text-xs bg-accent/10 text-accent px-2 py-0.5 rounded">
+                          {item.category}
+                        </span>
+                        {item.readTime && (
+                          <span className="text-xs text-muted-foreground">
+                            {item.readTime}
+                          </span>
+                        )}
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 mt-1">
-                      <span className="text-xs bg-accent/10 text-accent px-2 py-0.5 rounded">
+                  </div>
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          )}
+
+          {groupedResults.themes.length > 0 && (
+            <CommandGroup heading="Temas">
+              {groupedResults.themes.map((item) => (
+                <CommandItem
+                  key={item.id}
+                  onSelect={() => handleSelect(item)}
+                  className="cursor-pointer"
+                >
+                  <div className="flex items-start gap-3 w-full">
+                    {getIcon(item.type)}
+                    <div className="flex-1">
+                      <div className="font-medium">{item.title}</div>
+                      <div className="text-sm text-muted-foreground line-clamp-1">
+                        {item.description}
+                      </div>
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded mt-1 inline-block">
                         {item.category}
                       </span>
-                      {item.readTime && (
-                        <span className="text-xs text-muted-foreground">
-                          {item.readTime}
-                        </span>
-                      )}
                     </div>
                   </div>
-                </div>
-              </CommandItem>
-            ))}
-          </CommandGroup>
-        )}
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          )}
 
-        {groupedResults.themes.length > 0 && (
-          <CommandGroup heading="Temas">
-            {groupedResults.themes.map((item) => (
-              <CommandItem
-                key={item.id}
-                onSelect={() => handleSelect(item)}
-                className="cursor-pointer"
-              >
-                <div className="flex items-start gap-3 w-full">
-                  {getIcon(item.type)}
-                  <div className="flex-1">
-                    <div className="font-medium">{item.title}</div>
-                    <div className="text-sm text-muted-foreground line-clamp-1">
-                      {item.description}
+          {groupedResults.resources.length > 0 && (
+            <CommandGroup heading="Recursos">
+              {groupedResults.resources.map((item) => (
+                <CommandItem
+                  key={item.id}
+                  onSelect={() => handleSelect(item)}
+                  className="cursor-pointer"
+                >
+                  <div className="flex items-start gap-3 w-full">
+                    {getIcon(item.type)}
+                    <div className="flex-1">
+                      <div className="font-medium">{item.title}</div>
+                      <div className="text-sm text-muted-foreground line-clamp-1">
+                        {item.description}
+                      </div>
+                      <span className="text-xs bg-warm-accent/10 text-warm-accent px-2 py-0.5 rounded mt-1 inline-block">
+                        {item.category}
+                      </span>
                     </div>
-                    <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded mt-1 inline-block">
-                      {item.category}
-                    </span>
                   </div>
-                </div>
-              </CommandItem>
-            ))}
-          </CommandGroup>
-        )}
-
-        {groupedResults.resources.length > 0 && (
-          <CommandGroup heading="Recursos">
-            {groupedResults.resources.map((item) => (
-              <CommandItem
-                key={item.id}
-                onSelect={() => handleSelect(item)}
-                className="cursor-pointer"
-              >
-                <div className="flex items-start gap-3 w-full">
-                  {getIcon(item.type)}
-                  <div className="flex-1">
-                    <div className="font-medium">{item.title}</div>
-                    <div className="text-sm text-muted-foreground line-clamp-1">
-                      {item.description}
-                    </div>
-                    <span className="text-xs bg-warm-accent/10 text-warm-accent px-2 py-0.5 rounded mt-1 inline-block">
-                      {item.category}
-                    </span>
-                  </div>
-                </div>
-              </CommandItem>
-            ))}
-          </CommandGroup>
-        )}
-      </CommandList>
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          )}
+        </CommandList>
+      </Command>
     </CommandDialog>
   );
 };
