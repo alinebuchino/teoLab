@@ -7,15 +7,16 @@ const Footer = () => {
     <footer className="w-full bg-gradient-to-b from-primary to-primary/90 text-primary-foreground">
       <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col items-center">
         <div className="flex items-center space-x-3 mb-6">
-          <img 
-            src={teolabLogo} 
-            alt="TeoLab" 
-            className="h-11 object-contain" 
+          <img
+            src={teolabLogo}
+            alt="TeoLab"
+            className="h-11 object-contain"
           />
           <h2 className="text-3xl font-bold">TeoLab</h2>
         </div>
         <p className="text-center max-w-xl text-sm font-normal leading-relaxed text-primary-foreground/80 mb-4">
-          Dedicados ao estudo profundo e à proclamação das verdades bíblicas que transformam vidas e edificam a Igreja de Cristo.
+          Onde o conhecimento se encontra com a fé, e o estudo se torna adoração.
+          <br />Conhecer é também amar!
         </p>
         <div className="flex items-center gap-1.5 text-sm text-primary-foreground/80">
           <span>Feito com</span>
