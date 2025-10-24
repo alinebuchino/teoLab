@@ -1,12 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Clock, ChevronDown, ChevronUp } from "lucide-react";
 
 const ArticlesSection = () => {
   const [showAll, setShowAll] = useState(false);
+  const navigate = useNavigate();
   
   const articles = [
     {
+      id: "natureza-divina-cristo",
       title: "A Natureza Divina de Cristo: Uma Análise Bíblica",
       excerpt: "Explorando as Escrituras que revelam a divindade de Jesus Cristo e sua importância para a fé cristã.",
       category: "Cristologia",
@@ -15,6 +18,7 @@ const ArticlesSection = () => {
       featured: true
     },
     {
+      id: "graca-obras-salvacao",
       title: "Graça e Obras: O Equilíbrio Bíblico da Salvação",
       excerpt: "Como compreender o papel da graça divina e das boas obras na vida do cristão segundo as Escrituras.",
       category: "Soteriologia",
@@ -23,6 +27,7 @@ const ArticlesSection = () => {
       featured: false
     },
     {
+      id: "pais-igreja-formacao",
       title: "Os Pais da Igreja e a Formação Doutrinária",
       excerpt: "O papel fundamental dos primeiros teólogos cristãos na preservação e desenvolvimento da doutrina.",
       category: "História",
@@ -31,6 +36,7 @@ const ArticlesSection = () => {
       featured: false
     },
     {
+      id: "hermeneutica-biblica",
       title: "Hermenêutica Bíblica: Princípios de Interpretação",
       excerpt: "Métodos essenciais para uma interpretação correta e contextual das Sagradas Escrituras.",
       category: "Hermenêutica",
@@ -39,6 +45,7 @@ const ArticlesSection = () => {
       featured: false
     },
     {
+      id: "trindade-adoracao",
       title: "A Trindade na Adoração Cristã",
       excerpt: "Como a compreensão da Trindade enriquece nossa adoração e vida devocional.",
       category: "Teologia",
@@ -47,6 +54,7 @@ const ArticlesSection = () => {
       featured: false
     },
     {
+      id: "reforma-protestante",
       title: "Reforma Protestante: Contexto e Implicações",
       excerpt: "Um olhar histórico sobre os eventos que moldaram o cristianismo moderno.",
       category: "História",
@@ -103,7 +111,11 @@ const ArticlesSection = () => {
                   {articles[0].excerpt}
                 </p>
 
-                <Button variant="sacred" className="group hover:text-accent">
+                <Button 
+                  variant="sacred" 
+                  className="group hover:text-accent"
+                  onClick={() => navigate(`/artigo/${visibleArticles[0].id}`)}
+                >
                   Ler Artigo Completo
                   <ArrowRight className="w-4 h-4" />
                 </Button>
@@ -117,6 +129,7 @@ const ArticlesSection = () => {
               key={article.title}
               className="card-sacred hover:shadow-[0_8px_30px_hsl(var(--primary)/0.1)] group cursor-pointer animate-fade-in"
               style={{ animationDelay: `${(index + 1) * 0.1}s` }}
+              onClick={() => navigate(`/artigo/${article.id}`)}
             >
               <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                 <span className="bg-muted text-muted-foreground px-2 py-1 rounded text-xs">
