@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -10,6 +11,19 @@ interface ThemeCardProps {
 }
 
 const ThemeCard = ({ title, description, image, category, color }: ThemeCardProps) => {
+  const navigate = useNavigate();
+
+  // Criar slug do tema para a URL
+  const themeSlug = title
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // Remove acentos
+    .replace(/\s+/g, "-"); // Substitui espaços por hífens
+
+  const handleExploreClick = () => {
+    navigate(`/tema/${themeSlug}`);
+  };
+
   const colorVariants = {
     primary: "border-primary/20 hover:border-primary/40",
     accent: "border-accent/20 hover:border-accent/40",
@@ -49,7 +63,12 @@ const ThemeCard = ({ title, description, image, category, color }: ThemeCardProp
           {description}
         </p>
         
-        <Button variant="ghost" size="sm" className="w-full mt-4 group-hover:text-accent">
+        <Button 
+          variant="ghost" 
+          size="sm" 
+          className="w-full mt-4 group-hover:text-accent"
+          onClick={handleExploreClick}
+        >
           Explorar Tema
           <ArrowRight className="w-3 h-3 ml-1" />
         </Button>
