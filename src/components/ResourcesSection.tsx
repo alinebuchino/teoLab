@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Book, Headphones, Video, ExternalLink } from "lucide-react";
+import { Book, Headphones, Video, ExternalLink, ChevronDown, ChevronUp } from "lucide-react";
 
 const ResourcesSection = () => {
+  const [showAll, setShowAll] = useState(false);
+  
   const resources = [
     {
       type: "book",
@@ -23,8 +26,31 @@ const ResourcesSection = () => {
       description: "Aprenda métodos corretos de interpretação das Sagradas Escrituras.",
       icon: Video,
       color: "warm"
+    },
+    {
+      type: "book",
+      title: "Institutos da Religião Cristã - João Calvino",
+      description: "Uma obra fundamental da teologia reformada que moldou gerações.",
+      icon: Book,
+      color: "primary"
+    },
+    {
+      type: "podcast",
+      title: "Teologia para Vida",
+      description: "Conversas práticas aplicando a teologia ao cotidiano cristão.",
+      icon: Headphones,
+      color: "accent"
+    },
+    {
+      type: "video",
+      title: "Curso: História da Igreja",
+      description: "Uma jornada pelos principais eventos e personagens da história cristã.",
+      icon: Video,
+      color: "warm"
     }
   ];
+
+  const visibleResources = showAll ? resources : resources.slice(0, 3);
 
   return (
     <section id="resources-section" className="py-20 px-6 bg-gradient-subtle">
@@ -39,7 +65,7 @@ const ResourcesSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {resources.map((resource, index) => {
+          {visibleResources.map((resource, index) => {
             const Icon = resource.icon;
             const colorClasses = {
               primary: "text-primary border-primary/20 hover:border-primary/40 hover:shadow-[0_8px_25px_hsl(var(--primary)/0.15)]",
@@ -77,9 +103,13 @@ const ResourcesSection = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="outline" size="lg">
-            Ver Mais Recursos
-            <ExternalLink className="w-4 h-4" />
+          <Button 
+            variant="outline" 
+            size="lg"
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? "Ver Menos Recursos" : "Ver Mais Recursos"}
+            {showAll ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
           </Button>
         </div>
       </div>

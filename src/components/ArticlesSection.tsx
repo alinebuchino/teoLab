@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowRight, Calendar, Clock, ChevronDown, ChevronUp } from "lucide-react";
 
 const ArticlesSection = () => {
+  const [showAll, setShowAll] = useState(false);
+  
   const articles = [
     {
       title: "A Natureza Divina de Cristo: Uma Análise Bíblica",
@@ -34,8 +37,26 @@ const ArticlesSection = () => {
       date: "1 de Setembro, 2024",
       readTime: "10 min",
       featured: false
+    },
+    {
+      title: "A Trindade na Adoração Cristã",
+      excerpt: "Como a compreensão da Trindade enriquece nossa adoração e vida devocional.",
+      category: "Teologia",
+      date: "28 de Agosto, 2024",
+      readTime: "7 min",
+      featured: false
+    },
+    {
+      title: "Reforma Protestante: Contexto e Implicações",
+      excerpt: "Um olhar histórico sobre os eventos que moldaram o cristianismo moderno.",
+      category: "História",
+      date: "25 de Agosto, 2024",
+      readTime: "14 min",
+      featured: false
     }
   ];
+
+  const visibleArticles = showAll ? articles : articles.slice(0, 4);
 
   return (
     <section id="articles-section" className="py-20 px-6">
@@ -91,7 +112,7 @@ const ArticlesSection = () => {
           </div>
 
           {/* Other Articles */}
-          {articles.slice(1).map((article, index) => (
+          {visibleArticles.slice(1).map((article, index) => (
             <article
               key={article.title}
               className="card-sacred hover:shadow-[0_8px_30px_hsl(var(--primary)/0.1)] group cursor-pointer animate-fade-in"
@@ -128,9 +149,13 @@ const ArticlesSection = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="outline" size="lg">
-            Ver Todos os Artigos
-            <ArrowRight className="w-4 h-4" />
+          <Button 
+            variant="outline" 
+            size="lg"
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? "Ver Menos Artigos" : "Ver Todos os Artigos"}
+            {showAll ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
           </Button>
         </div>
       </div>
