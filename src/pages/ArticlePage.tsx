@@ -1,12 +1,17 @@
-import { useParams, useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, Clock, Share2 } from "lucide-react";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, Calendar, Clock } from "lucide-react";
+import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 const ArticlePage = () => {
   const { articleId } = useParams<{ articleId: string }>();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   // Dados completos dos artigos
   const articles: Record<string, any> = {
@@ -223,7 +228,7 @@ const ArticlePage = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       <article className="pt-24 pb-20 px-6">
         <div className="max-w-4xl mx-auto">
           {/* Botão Voltar */}
@@ -263,15 +268,15 @@ const ArticlePage = () => {
               <p className="text-foreground font-medium">
                 Por {currentArticle.author}
               </p>
-              <Button variant="outline" size="sm">
+              {/* <Button variant="outline" size="sm">
                 <Share2 className="w-4 h-4 mr-2" />
                 Compartilhar
-              </Button>
+              </Button> */}
             </div>
           </div>
 
           {/* Conteúdo do Artigo */}
-          <div 
+          <div
             className="prose prose-lg max-w-none
               prose-headings:text-foreground prose-headings:font-bold
               prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
@@ -290,10 +295,10 @@ const ArticlePage = () => {
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Voltar para Artigos
               </Button>
-              <Button variant="outline">
+              {/* <Button variant="outline">
                 <Share2 className="w-4 h-4 mr-2" />
                 Compartilhar Artigo
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
