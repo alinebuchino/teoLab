@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface ThemeCardProps {
   title: string;
@@ -13,15 +13,8 @@ interface ThemeCardProps {
 const ThemeCard = ({ title, description, image, category, color }: ThemeCardProps) => {
   const navigate = useNavigate();
 
-  // Criar slug do tema para a URL
-  const themeSlug = title
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "") // Remove acentos
-    .replace(/\s+/g, "-"); // Substitui espaços por hífens
-
   const handleExploreClick = () => {
-    navigate(`/tema/${themeSlug}`);
+    navigate(`/tema/${category}`);
   };
 
   const colorVariants = {
@@ -39,14 +32,14 @@ const ThemeCard = ({ title, description, image, category, color }: ThemeCardProp
   return (
     <div className={`card-sacred group cursor-pointer ${colorVariants[color]} ${bgVariants[color]}`}>
       <div className="relative overflow-hidden rounded-lg mb-4">
-        <img 
+        <img
           src={image}
           alt={`${title} theological study icon`}
           className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
       </div>
-      
+
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <span className="text-xs font-medium text-accent uppercase tracking-wider">
@@ -54,18 +47,18 @@ const ThemeCard = ({ title, description, image, category, color }: ThemeCardProp
           </span>
           <ArrowRight className="w-4 h-4 text-muted-foreground transition-transform group-hover:translate-x-1" />
         </div>
-        
+
         <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
           {title}
         </h3>
-        
+
         <p className="text-sm text-muted-foreground leading-relaxed">
           {description}
         </p>
-        
-        <Button 
-          variant="ghost" 
-          size="sm" 
+
+        <Button
+          variant="ghost"
+          size="sm"
           className="w-full mt-4 group-hover:text-accent"
           onClick={handleExploreClick}
         >

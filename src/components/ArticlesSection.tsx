@@ -1,70 +1,17 @@
+import articlesById from "@/artigos/metadatas/allArticlesId";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Calendar, ChevronDown, ChevronUp, Clock } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, Clock, ChevronDown, ChevronUp } from "lucide-react";
 
 const ArticlesSection = () => {
   const [showAll, setShowAll] = useState(false);
   const navigate = useNavigate();
-  
-  const articles = [
-    {
-      id: "natureza-divina-cristo",
-      title: "A Natureza Divina de Cristo: Uma Análise Bíblica",
-      excerpt: "Explorando as Escrituras que revelam a divindade de Jesus Cristo e sua importância para a fé cristã.",
-      category: "Cristologia",
-      date: "15 de Setembro, 2024",
-      readTime: "8 min",
-      featured: true
-    },
-    {
-      id: "graca-obras-salvacao",
-      title: "Graça e Obras: O Equilíbrio Bíblico da Salvação",
-      excerpt: "Como compreender o papel da graça divina e das boas obras na vida do cristão segundo as Escrituras.",
-      category: "Soteriologia",
-      date: "10 de Setembro, 2024",
-      readTime: "12 min",
-      featured: false
-    },
-    {
-      id: "pais-igreja-formacao",
-      title: "Os Pais da Igreja e a Formação Doutrinária",
-      excerpt: "O papel fundamental dos primeiros teólogos cristãos na preservação e desenvolvimento da doutrina.",
-      category: "História",
-      date: "5 de Setembro, 2024",
-      readTime: "15 min",
-      featured: false
-    },
-    {
-      id: "hermeneutica-biblica",
-      title: "Hermenêutica Bíblica: Princípios de Interpretação",
-      excerpt: "Métodos essenciais para uma interpretação correta e contextual das Sagradas Escrituras.",
-      category: "Hermenêutica",
-      date: "1 de Setembro, 2024",
-      readTime: "10 min",
-      featured: false
-    },
-    {
-      id: "trindade-adoracao",
-      title: "A Trindade na Adoração Cristã",
-      excerpt: "Como a compreensão da Trindade enriquece nossa adoração e vida devocional.",
-      category: "Teologia",
-      date: "28 de Agosto, 2024",
-      readTime: "7 min",
-      featured: false
-    },
-    {
-      id: "reforma-protestante",
-      title: "Reforma Protestante: Contexto e Implicações",
-      excerpt: "Um olhar histórico sobre os eventos que moldaram o cristianismo moderno.",
-      category: "História",
-      date: "25 de Agosto, 2024",
-      readTime: "14 min",
-      featured: false
-    }
-  ];
 
+  const articles = Object.values(articlesById).filter(Boolean);
   const visibleArticles = showAll ? articles : articles.slice(0, 4);
+
+  if (!articles.length) return null;
 
   return (
     <section id="articles-section" className="py-20 px-6">
@@ -74,59 +21,64 @@ const ArticlesSection = () => {
             Artigos <span className="text-gradient-primary">Recentes</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Descubra insights teológicos profundos através de estudos cuidadosamente elaborados para fortalecer sua fé.
+            Estudos teológicos cuidadosamente preparados para iluminar sua mente e fortalecer seu coração na fé.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {/* Featured Article */}
-          <div className="lg:col-span-2">
-            <article className="card-sacred relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 border-accent/20">
-              <div className="absolute top-4 left-4">
-                <span className="bg-gradient-divine text-accent-foreground px-3 py-1 rounded-full text-xs font-medium">
-                  Artigo em Destaque
-                </span>
-              </div>
-
-              <div className="pt-16 pb-6">
-                <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                  <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs font-medium">
-                    {articles[0].category}
+          {/* Artigo em destaque */}
+          {articles[0] && (
+            <div className="lg:col-span-2">
+              <article className="card-sacred relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 border-accent/20">
+                <div className="absolute top-4 left-4">
+                  <span className="bg-gradient-divine text-accent-foreground px-3 py-1 rounded-full text-xs font-medium">
+                    Artigo em Destaque
                   </span>
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-3 h-3" />
-                    {articles[0].date}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-3 h-3" />
-                    {articles[0].readTime}
-                  </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-foreground mb-3 hover:text-primary transition-colors cursor-pointer">
-                  {articles[0].title}
-                </h3>
+                <div className="pt-16 pb-6">
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                    <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs font-medium">
+                      {articles[0].category}
+                    </span>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-3 h-3" />
+                      {articles[0].date}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-3 h-3" />
+                      {articles[0].readTime}
+                    </div>
+                  </div>
 
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  {articles[0].excerpt}
-                </p>
+                  <h3
+                    className="text-2xl font-bold text-foreground mb-3 hover:text-primary transition-colors cursor-pointer"
+                    onClick={() => navigate(`/artigo/${articles[0].id}`)}
+                  >
+                    {articles[0].title}
+                  </h3>
 
-                <Button 
-                  variant="sacred" 
-                  className="group hover:text-accent"
-                  onClick={() => navigate(`/artigo/${visibleArticles[0].id}`)}
-                >
-                  Ler Artigo Completo
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
-              </div>
-            </article>
-          </div>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    {articles[0].excerpt}
+                  </p>
 
-          {/* Other Articles */}
+                  <Button
+                    variant="sacred"
+                    className="group hover:text-accent"
+                    onClick={() => navigate(`/artigo/${articles[0].id}`)}
+                  >
+                    Ler Artigo Completo
+                    <ArrowRight className="w-4 h-4" />
+                  </Button>
+                </div>
+              </article>
+            </div>
+          )}
+
+          {/* Demais artigos */}
           {visibleArticles.slice(1).map((article, index) => (
             <article
-              key={article.title}
+              key={article.id}
               className="card-sacred hover:shadow-[0_8px_30px_hsl(var(--primary)/0.1)] group cursor-pointer animate-fade-in"
               style={{ animationDelay: `${(index + 1) * 0.1}s` }}
               onClick={() => navigate(`/artigo/${article.id}`)}
@@ -162,8 +114,8 @@ const ArticlesSection = () => {
         </div>
 
         <div className="text-center">
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="lg"
             onClick={() => setShowAll(!showAll)}
           >
