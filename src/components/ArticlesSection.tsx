@@ -4,12 +4,37 @@ import { ArrowRight, Calendar, ChevronDown, ChevronUp, Clock } from "lucide-reac
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const monthMap: Record<string, string> = {
+  Janeiro: "01",
+  Fevereiro: "02",
+  Março: "03",
+  Abril: "04",
+  Maio: "05",
+  Junho: "06",
+  Julho: "07",
+  Agosto: "08",
+  Setembro: "09",
+  Outubro: "10",
+  Novembro: "11",
+  Dezembro: "12",
+};
+
+function parsePtDate(ptDate: string) {
+  const [day, , month, year] = ptDate.split(" ");
+  const monthNumber = monthMap[month.replace(",", "")];
+  return new Date(`${year}-${monthNumber}-${day}`);
+}
+
 const ArticlesSection = () => {
   const [showAll, setShowAll] = useState(false);
   const navigate = useNavigate();
 
-  const articles = Object.values(articlesById).filter(Boolean);
-  const visibleArticles = showAll ? articles : articles.slice(0, 4);
+  // Ordena os artigos do mais recente para o mais antigo
+  const articles = Object.values(articlesById)
+    .filter(Boolean)
+    .sort((a, b) => parsePtDate(b.date).getTime() - parsePtDate(a.date).getTime());
+
+  const visibleArticles = showAll ? articles : articles.slice(0, 6);
 
   if (!articles.length) return null;
 

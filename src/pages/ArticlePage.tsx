@@ -71,29 +71,21 @@ const ArticlePage = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-between pb-6 border-b border-border ">
-              {/* <p className="text-gray-300 font-medium">
-                Por {currentArticle.author}
-              </p>
-              <Button variant="outline" size="sm">
-                <Share2 className="w-4 h-4 mr-2" />
-                Compartilhar
-              </Button> */}
-            </div>
+            <div className="flex items-center justify-between pb-6 border-b border-border " />
           </div>
 
           {/* Conteúdo do Artigo */}
-          <div
-            className="prose prose-lg max-w-none
-              prose-headings:text-foreground prose-headings:font-bold
-              prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
-              prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
-              prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6
-              prose-strong:text-foreground prose-strong:font-semibold
-              prose-ul:text-muted-foreground prose-ul:my-6
-              prose-li:mb-2"
-            dangerouslySetInnerHTML={{ __html: currentArticle.content }}
-          />
+          <div className="prose prose-lg max-w-none
+            prose-headings:text-foreground prose-headings:font-bold
+            prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
+            prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
+            prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6
+            prose-strong:text-foreground prose-strong:font-semibold
+            prose-ul:text-muted-foreground prose-ul:my-6
+            prose-li:mb-2"
+          >
+            {currentArticle.content}
+          </div>
 
           {/* Rodapé do Artigo */}
           <div className="mt-16 pt-8 border-t border-border">
@@ -102,10 +94,6 @@ const ArticlePage = () => {
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Voltar para Artigos
               </Button>
-              {/* <Button variant="outline">
-                <Share2 className="w-4 h-4 mr-2" />
-                Compartilhar Artigo
-              </Button> */}
             </div>
           </div>
         </div>
