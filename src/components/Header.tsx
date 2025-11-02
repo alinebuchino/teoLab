@@ -1,13 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { Home, Menu, X, BookOpen, Newspaper, Library } from "lucide-react";
-import { useState } from "react";
-import { NavBar } from "@/components/ui/tubelight-navbar";
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { ThemesDropdown } from "@/components/ThemesDropdown";
-import SearchComponent from "@/components/ui/animated-glowing-search-bar";
-import SearchDialog from "@/components/SearchDialog";
-import { InteractiveMenu, InteractiveMenuItem } from "@/components/ui/modern-mobile-menu";
 import teolabLogo from "@/assets/teolab-logo.png";
+import SearchDialog from "@/components/SearchDialog";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import SearchComponent from "@/components/ui/animated-glowing-search-bar";
+import { Button } from "@/components/ui/button";
+import { InteractiveMenu, InteractiveMenuItem } from "@/components/ui/modern-mobile-menu";
+import { BookOpen, Home, Library, Menu, Newspaper, X } from "lucide-react";
+import { useState } from "react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -74,9 +72,6 @@ const Header = () => {
               <Button variant="ghost" className="w-full justify-start text-foreground hover:text-accent">
                 Home
               </Button>
-              <div className="px-4">
-                <ThemesDropdown />
-              </div>
               <div className="px-4 py-2">
                 <SearchComponent onClick={() => setIsSearchOpen(true)} />
               </div>

@@ -2,6 +2,7 @@ import resourcesMetadata from "@/artigos/metadatas/resourcesMetadata";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 import { useState } from "react";
+import { BackgroundPaths } from "./ui/background-paths";
 
 const ResourcesSection = () => {
   const [showAll, setShowAll] = useState(false);
@@ -15,56 +16,54 @@ const ResourcesSection = () => {
   };
 
   return (
-    <section id="resources-section" className="py-20 px-6 bg-gradient-subtle">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Recursos <span className="text-gradient-divine">Recomendados</span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Amplie seus estudos com livros, vídeos e cursos cuidadosamente selecionados.
-          </p>
-        </div>
+    <section id="resources-section" className="py-6">
+      <div className="-mt-20">
+        <BackgroundPaths
+          title={`Recursos <gradient>Recomendados</gradient>`}
+          subtitle="Amplie seus estudos com livros, vídeos e cursos cuidadosamente selecionados."
+        >
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {visibleResources.map((resource, index) => {
+                const Icon = resource.icon;
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {visibleResources.map((resource, index) => {
-            const Icon = resource.icon;
+                return (
+                  <div
+                    key={resource.id}
+                    className={`card-sacred group cursor-pointer ${colorClasses[resource.color]} animate-fade-in`}
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-current/10 to-current/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Icon className="w-8 h-8" />
+                      </div>
 
-            return (
-              <div
-                key={resource.id}
-                className={`card-sacred group cursor-pointer ${colorClasses[resource.color]} animate-fade-in`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-current/10 to-current/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Icon className="w-8 h-8" />
+                      <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-current transition-colors">
+                        {resource.title}
+                      </h3>
+
+                      <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                        {resource.description}
+                      </p>
+
+                      <Button variant="ghost" size="sm" className="group-hover:text-current" onClick={() => window.open(resource.url, "_blank")}>
+                        Acessar
+                        <ExternalLink className="w-3 h-3 ml-1" />
+                      </Button>
+                    </div>
                   </div>
+                );
+              })}
+            </div>
 
-                  <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-current transition-colors">
-                    {resource.title}
-                  </h3>
-
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    {resource.description}
-                  </p>
-
-                  <Button variant="ghost" size="sm" className="group-hover:text-current" onClick={() => window.open(resource.url, "_blank")}>
-                    Acessar
-                    <ExternalLink className="w-3 h-3 ml-1" />
-                  </Button>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="text-center">
-          <Button variant="outline" size="lg" onClick={() => setShowAll(!showAll)}>
-            {showAll ? "Ver Menos Recursos" : "Ver Mais Recursos"}
-            {showAll ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-          </Button>
-        </div>
+            <div className="text-center">
+              <Button variant="outline" size="lg" onClick={() => setShowAll(!showAll)}>
+                {showAll ? "Ver Menos Recursos" : "Ver Mais Recursos"}
+                {showAll ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+              </Button>
+            </div>
+          </div>
+        </BackgroundPaths>
       </div>
     </section>
   );

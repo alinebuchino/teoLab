@@ -3,6 +3,7 @@ import christologyIcon from "@/assets/christology-icon.jpg";
 import churchHistoryIcon from "@/assets/church-history-icon.jpg";
 import doctrineIcon from "@/assets/doctrine-icon.jpg";
 import eschatologyIcon from "@/assets/eschatology-icon.jpg";
+import theologyIcon from "@/assets/theology-hero.jpg";
 
 export interface ThemeMetadata {
   id: string;
@@ -60,7 +61,7 @@ const themesMetadata: Record<string, ThemeMetadata> = {
     description:
       "O estudo do ser humano à luz das Escrituras, revelando sua natureza, propósito e relação com Deus.",
     category: "História",
-    image: churchHistoryIcon,
+    image: theologyIcon,
     color: "primary",
     keywords: ["história", "cristianismo", "igreja", "reforma", "concílios"]
   },
