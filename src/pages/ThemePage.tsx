@@ -6,6 +6,29 @@ import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
+// Mapeamento de meses em português para número
+const monthMap: Record<string, string> = {
+  Janeiro: "01",
+  Fevereiro: "02",
+  Março: "03",
+  Abril: "04",
+  Maio: "05",
+  Junho: "06",
+  Julho: "07",
+  Agosto: "08",
+  Setembro: "09",
+  Outubro: "10",
+  Novembro: "11",
+  Dezembro: "12",
+};
+
+// Função para converter data em português para objeto Date
+function parsePtDate(ptDate: string) {
+  const [day, , month, year] = ptDate.split(" ");
+  const monthNumber = monthMap[month.replace(",", "")];
+  return new Date(`${year}-${monthNumber}-${day}`);
+}
+
 const ThemePage = () => {
   const { theme } = useParams<{ theme: string }>();
   const navigate = useNavigate();
@@ -31,7 +54,13 @@ const ThemePage = () => {
   // Pega os artigos do tema atual (slug da URL)
   const currentTheme = theme || "";
   const themeArticleIds = articlesByTheme[currentTheme] || [];
-  const articles = themeArticleIds.map(id => articlesById[id]).filter(Boolean);
+  let articles = themeArticleIds.map(id => articlesById[id]).filter(Boolean);
+
+  // Ordena os artigos do mais recente para o mais antigo
+  articles = articles.sort(
+    (a, b) => parsePtDate(b.date).getTime() - parsePtDate(a.date).getTime()
+  );
+
   const themeName = themeNames[currentTheme] || "Tema";
 
   return (
