@@ -15,7 +15,7 @@ const Footer = () => {
           <h2 className="text-3xl font-bold">TeoLab</h2>
         </div>
         <p className="text-center max-w-xl text-sm font-normal leading-relaxed text-primary-foreground/80 mb-4">
-          Onde o conhecimento se encontra com a fé, e o estudo se torna adoração.
+          Onde o conhecimento se encontra com a fé, o estudo se torna adoração.
           <br />Conhecer é também amar!
         </p>
         <div className="flex items-center gap-1.5 text-sm text-primary-foreground/80">

@@ -38,25 +38,6 @@ const themesMetadata: Record<string, ThemeMetadata> = {
   },
   "theme-3": {
     id: "theme-3",
-    title: "Apologética Cristã",
-    description:
-      "Defesa inteligente da fé cristã, usando razão e clareza para comunicar a verdade de Deus.",
-    category: "Apologética",
-    image: eschatologyIcon,
-    color: "warm",
-    keywords: ["apologética", "defesa da fé", "razão", "verdade de Deus"]
-  },
-  "theme-4": {
-    id: "theme-4",
-    title: "História da Igreja",
-    description: "Jornada através dos marcos históricos do cristianismo através dos séculos.",
-    category: "História",
-    image: churchHistoryIcon,
-    color: "primary",
-    keywords: ["história", "cristianismo", "igreja", "reforma", "concílios"]
-  },
-  "theme-5": {
-    id: "theme-5",
     title: "Antropologia Bíblica",
     description:
       "O estudo do ser humano à luz das Escrituras, revelando sua natureza, propósito e relação com Deus.",
@@ -65,8 +46,18 @@ const themesMetadata: Record<string, ThemeMetadata> = {
     color: "primary",
     keywords: ["história", "cristianismo", "igreja", "reforma", "concílios"]
   },
-  "theme-6": {
-    id: "theme-6",
+  "theme-4": {
+    id: "theme-4",
+    title: "Apologética Cristã",
+    description:
+      "Defesa inteligente da fé cristã, usando razão e clareza para comunicar a verdade de Deus.",
+    category: "Apologética",
+    image: eschatologyIcon,
+    color: "warm",
+    keywords: ["apologética", "defesa da fé", "razão", "verdade de Deus"]
+  },
+  "theme-5": {
+    id: "theme-5",
     title: "Estudos Bíblicos",
     description:
       "Métodos de interpretação bíblica e análise exegética das Escrituras.",
@@ -74,6 +65,15 @@ const themesMetadata: Record<string, ThemeMetadata> = {
     image: biblicalStudiesIcon,
     color: "accent",
     keywords: ["estudos bíblicos", "exegese", "interpretação", "escrituras", "análise"]
+  },
+  "theme-6": {
+    id: "theme-6",
+    title: "História da Igreja",
+    description: "Jornada através dos marcos históricos do cristianismo através dos séculos.",
+    category: "História",
+    image: churchHistoryIcon,
+    color: "primary",
+    keywords: ["história", "cristianismo", "igreja", "reforma", "concílios"]
   }
 };
 
