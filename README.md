@@ -1,4 +1,4 @@
-# ✝️ Teologia Viva
+# ✝️ TeoLab - Teologia Cristã
 
 > Um espaço para reflexão cristã, maturidade espiritual e formação teológica sólida — com profundidade bíblica e linguagem acessível.
 
@@ -19,7 +19,7 @@ Os artigos estão organizados em um formato espiritual e pedagógico, guiando o 
 - 💭 **Propedêutica Teológica**
 - 🪞 **Maturidade Cristã**
 - 🧩 **Antropologia Bíblica** 
-- 😔 **Apologética Cristã**
+- 🕊️ **Apologética Cristã**
 - 🔥 **Estudos Bíblicos** 
 - ❤️‍🩹 **História da Igreja**
 
