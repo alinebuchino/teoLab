@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -278,3 +279,13 @@ All colors MUST be HSL. Sophisticated color palette with sacred symbolism.
     }
   }
 }
+
+.subheading-sacred {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgb(90, 90, 90);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+

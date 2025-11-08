@@ -27,6 +27,7 @@ const HeroSection = () => {
             Quando buscamos as respostas certas com sinceridade, o estudo teológico se torna um ato de adoração que fortalece o discípulo e glorifica a Deus com a mente e com o coração.
           </p>
 
+
         </motion.div>
       </LampContainer>
 

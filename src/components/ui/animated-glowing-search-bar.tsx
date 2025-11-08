@@ -12,43 +12,43 @@ const SearchComponent = ({ onClick }: SearchComponentProps) => {
         <div className="absolute z-[-1] overflow-hidden h-full w-full max-h-[50px] max-w-[240px] rounded-xl blur-[3px]
                         before:absolute before:content-[''] before:z-[-2] before:w-[999px] before:h-[999px] before:bg-no-repeat before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:rotate-60
                         before:bg-[conic-gradient(hsl(var(--background)),hsl(var(--accent))_5%,hsl(var(--background))_38%,hsl(var(--background))_50%,hsl(var(--primary))_60%,hsl(var(--background))_87%)] before:transition-all before:duration-2000
-                        group-hover:before:rotate-[-120deg] group-focus-within:before:rotate-[420deg] group-focus-within:before:duration-[4000ms]">
+                        group-hover:before:rotate-[-120deg] group-focus-within:before:rotate-[420deg] group-focus-within:before:duration-\[4000ms\]">
         </div>
         <div className="absolute z-[-1] overflow-hidden h-full w-full max-h-[48px] max-w-[238px] rounded-xl blur-[3px]
                         before:absolute before:content-[''] before:z-[-2] before:w-[600px] before:h-[600px] before:bg-no-repeat before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:rotate-[82deg]
                         before:bg-[conic-gradient(rgba(0,0,0,0),hsl(var(--accent)/0.8),rgba(0,0,0,0)_10%,rgba(0,0,0,0)_50%,hsl(var(--primary)/0.6),rgba(0,0,0,0)_60%)] before:transition-all before:duration-2000
-                        group-hover:before:rotate-[-98deg] group-focus-within:before:rotate-[442deg] group-focus-within:before:duration-[4000ms]">
+                        group-hover:before:rotate-[-98deg] group-focus-within:before:rotate-[442deg] group-focus-within:before:duration-\[4000ms\]">
         </div>
         <div className="absolute z-[-1] overflow-hidden h-full w-full max-h-[48px] max-w-[238px] rounded-xl blur-[3px]
                         before:absolute before:content-[''] before:z-[-2] before:w-[600px] before:h-[600px] before:bg-no-repeat before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:rotate-[82deg]
                         before:bg-[conic-gradient(rgba(0,0,0,0),hsl(var(--accent)/0.8),rgba(0,0,0,0)_10%,rgba(0,0,0,0)_50%,hsl(var(--primary)/0.6),rgba(0,0,0,0)_60%)] before:transition-all before:duration-2000
-                        group-hover:before:rotate-[-98deg] group-focus-within:before:rotate-[442deg] group-focus-within:before:duration-[4000ms]">
+                        group-hover:before:rotate-[-98deg] group-focus-within:before:rotate-[442deg] group-focus-within:before:duration-\[4000ms\]">
         </div>
         <div className="absolute z-[-1] overflow-hidden h-full w-full max-h-[48px] max-w-[238px] rounded-xl blur-[3px] 
                         before:absolute before:content-[''] before:z-[-2] before:w-[600px] before:h-[600px] before:bg-no-repeat before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:rotate-[82deg]
                         before:bg-[conic-gradient(rgba(0,0,0,0),hsl(var(--accent)/0.8),rgba(0,0,0,0)_10%,rgba(0,0,0,0)_50%,hsl(var(--primary)/0.6),rgba(0,0,0,0)_60%)] before:transition-all before:duration-2000
-                        group-hover:before:rotate-[-98deg] group-focus-within:before:rotate-[442deg] group-focus-within:before:duration-[4000ms]">
+                        group-hover:before:rotate-[-98deg] group-focus-within:before:rotate-[442deg] group-focus-within:before:duration-\[4000ms\]">
         </div>
 
         <div className="absolute z-[-1] overflow-hidden h-full w-full max-h-[46px] max-w-[234px] rounded-lg blur-[2px] 
                         before:absolute before:content-[''] before:z-[-2] before:w-[600px] before:h-[600px] before:bg-no-repeat before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:rotate-[83deg]
                         before:bg-[conic-gradient(rgba(0,0,0,0)_0%,hsl(var(--accent)/0.7),rgba(0,0,0,0)_8%,rgba(0,0,0,0)_50%,hsl(var(--primary)/0.5),rgba(0,0,0,0)_58%)] before:brightness-140
-                        before:transition-all before:duration-2000 group-hover:before:rotate-[-97deg] group-focus-within:before:rotate-[443deg] group-focus-within:before:duration-[4000ms]">
+                        before:transition-all before:duration-2000 group-hover:before:rotate-[-97deg] group-focus-within:before:rotate-[443deg] group-focus-within:before:duration-\[4000ms\]">
         </div>
 
         <div className="absolute z-[-1] overflow-hidden h-full w-full max-h-[44px] max-w-[230px] rounded-xl blur-[0.5px] 
                         before:absolute before:content-[''] before:z-[-2] before:w-[600px] before:h-[600px] before:bg-no-repeat before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:rotate-70
                         before:bg-[conic-gradient(hsl(var(--background)),hsl(var(--accent))_5%,hsl(var(--background))_14%,hsl(var(--background))_50%,hsl(var(--primary))_60%,hsl(var(--background))_64%)] before:brightness-130
-                        before:transition-all before:duration-2000 group-hover:before:rotate-[-110deg] group-focus-within:before:rotate-[430deg] group-focus-within:before:duration-[4000ms]">
+                        before:transition-all before:duration-2000 group-hover:before:rotate-[-110deg] group-focus-within:before:rotate-[430deg] group-focus-within:before:duration-\[4000ms\]">
         </div>
 
         <div id="main" className="relative group pointer-events-none">
-          <input 
-            placeholder="Pesquisar..." 
-            type="text" 
-            name="text" 
+          <input
+            placeholder="Pesquisar..."
+            type="text"
+            name="text"
             readOnly
-            className="bg-background border border-border/20 w-[230px] h-[42px] rounded-lg text-foreground px-[45px] text-sm focus:outline-none placeholder-muted-foreground focus:border-accent/50 transition-colors" 
+            className="bg-background border border-border/20 w-[230px] h-[42px] rounded-lg text-foreground px-[45px] text-sm focus:outline-none placeholder-muted-foreground focus:border-accent/50 transition-colors"
           />
           <div id="input-mask" className="pointer-events-none w-[80px] h-[16px] absolute bg-gradient-to-r from-transparent to-background top-[13px] left-[55px] group-focus-within:hidden"></div>
           <div id="pink-mask" className="pointer-events-none w-[24px] h-[16px] absolute bg-accent top-[8px] left-[4px] blur-2xl opacity-80 transition-all duration-2000 group-hover:opacity-0"></div>
