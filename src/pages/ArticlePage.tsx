@@ -90,9 +90,13 @@ const ArticlePage = () => {
           {/* Rodapé do Artigo */}
           <div className="mt-16 pt-8 border-t border-border">
             <div className="flex items-center justify-between">
-              <Button variant="outline" onClick={() => navigate("/")}>
+              <Button variant="outline"
+                onClick={() => {
+                  navigate("/");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}>
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                Voltar para Artigos
+                Voltar para Início
               </Button>
             </div>
           </div>

@@ -34,7 +34,7 @@ const ArticlesSection = () => {
     .filter(Boolean)
     .sort((a, b) => parsePtDate(b.date).getTime() - parsePtDate(a.date).getTime());
 
-  const visibleArticles = showAll ? articles : articles.slice(0, 6);
+  const visibleArticles = showAll ? articles : articles.slice(0, 3);
 
   if (!articles.length) return null;
 

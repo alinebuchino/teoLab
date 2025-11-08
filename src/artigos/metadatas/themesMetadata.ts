@@ -31,7 +31,7 @@ const themesMetadata: Record<string, ThemeMetadata> = {
     title: "Maturidade Cristã",
     description:
       "O crescimento contínuo da fé, caráter e vida espiritual rumo à semelhança com Cristo.",
-    category: "Disciplina",
+    category: "Maturidade",
     image: christologyIcon,
     color: "accent",
     keywords: ["maturidade", "crescimento", "vida espiritual"]
@@ -41,7 +41,7 @@ const themesMetadata: Record<string, ThemeMetadata> = {
     title: "Antropologia Bíblica",
     description:
       "O estudo do ser humano à luz das Escrituras, revelando sua natureza, propósito e relação com Deus.",
-    category: "História",
+    category: "Antropologia",
     image: theologyIcon,
     color: "primary",
     keywords: ["história", "cristianismo", "igreja", "reforma", "concílios"]

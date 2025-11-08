@@ -20,7 +20,7 @@ export const articlesMetadata: Record<string, ArticleMetadata> = {
     id: "crise-liberalismo",
     title: "Fé e Razão: A Crise do Liberalismo e o Retorno à Palavra",
     category: "Propedêutica",
-    date: "01 de Novembro, 2025",
+    date: "28 de Outubro, 2025",
     readTime: "10 min",
     excerpt: "O liberalismo teológico surgiu com a intenção de tornar a fé cristã relevante para o homem moderno."
   },
@@ -28,9 +28,89 @@ export const articlesMetadata: Record<string, ArticleMetadata> = {
     id: "palavra-que-fere",
     title: "A Palavra que Fere: Oração, Conhecimento e Vocação",
     category: "Propedêutica",
-    date: "06 de Novembro, 2025",
+    date: "01 de Novembro, 2025",
     readTime: "15 min",
     excerpt: "A oração é uma luta com Deus, e nessa luta você vencerá todas as vezes que for vencido."
+  },
+  "homem-desejante":{
+    id: "homem-desejante",
+    title: "O Homem Desejante: A Fome de Deus que Define Nossa Existência",
+    category: "Antropologia",
+    date: "03 de Novembro, 2025",
+    readTime: "10 min",
+    excerpt: "Uma reflexão sobre o néfesh bíblico e a natureza humana como desejo essencial por Deus."
+  },
+  "homem-deliberante":{
+    id: "homem-deliberante",
+    title: "O Homem Deliberante: Onde o Homem Decide Entre Deus e Seus Ídolos",
+    category: "Antropologia",
+    date: "05 de Novembro, 2025",
+    readTime: "16 min",
+    excerpt: "Uma reflexão profunda sobre o coração humano como o centro das decisões, do autoengano e da batalha espiritual diante de Deus."
+  },
+  "homem-contingente":{
+    id: "homem-contingente",
+    title: "O Homem Contingente: Fragilidade Humana e Graça Divina",
+    category: "Antropologia",
+    date: "06 de Novembro, 2025",
+    readTime: "13 min",
+    excerpt: "Uma reflexão sobre a fragilidade humana e a graça divina que transforma a fraqueza em dependência de Deus."
+  },
+  "espirito-ruah":{
+    id: "espirito-ruah",
+    title: "Sopro que Vivifica — O Espírito (ruah) e a Vida Humana",
+    category: "Antropologia",
+    date: "07 de Novembro, 2025",
+    readTime: "5 min",
+    excerpt: "Uma meditação sobre o homem como ser vivente, cuja existência frágil e dependente encontra sentido apenas no sopro vivificador de Deus."
+  },
+  "amadurecimento":{
+    id: "amadurecimento",
+    title: "Por que precisamos amadurecer em Cristo?",
+    category: "Maturidade",
+    date: "08 de Novembro, 2025",
+    readTime: "5 min",
+    excerpt: "A maturidade cristã é uma jornada de retorno à nossa verdadeira identidade: sermos imagem e semelhança de Deus."
+  },
+  "automimo":{
+    id: "automimo",
+    title: "Estamos Viciados em Automimo",
+    category: "Maturidade",
+    date: "09 de Novembro, 2025",
+    readTime: "8 min",
+    excerpt: "O vício do automimo revela uma geração que busca conforto em si mesma, mas esquece o chamado à cruz."
+  },
+  "autorreferencia":{
+    id: "autorreferencia",
+    title: "Autorreferência e Autoestima: O Desafio do Autoesquecimento Cristão",
+    category: "Maturidade",
+    date: "10 de Novembro, 2025",
+    readTime: "7 min",
+    excerpt: "Uma reflexão sobre o autoesquecimento cristão frente à cultura da autorreferência e da busca por validação."
+  },
+  "mentira":{
+    id: "mentira",
+    title: "Mentira: A Verdade Sobre o Engano e Suas Implicações Espirituais",
+    category: "Maturidade",
+    date: "11 de Novembro, 2025",
+    readTime: "8 min",
+    excerpt: "Uma reflexão teológica e prática sobre a natureza, as motivações e as implicações espirituais da mentira."
+  },
+  "constancia":{
+    id: "constancia",
+    title: "Inconstância, Irresponsabilidade, Inutilidade",
+    category: "Maturidade",
+    date: "12 de Novembro, 2025",
+    readTime: "6 min",
+    excerpt: "Uma reflexão sobre como a constância e o propósito cristão vencem a procrastinação e dão sentido às nossas ações."
+  },
+  "ansiedade":{
+    id: "ansiedade",
+    title: "Ansiedade — A Arte de Confiar no Cuidado de Deus",
+    category: "Maturidade",
+    date: "13 de Novembro, 2025",
+    readTime: "9 min",
+    excerpt: "Uma reflexão bíblica sobre a ansiedade como lembrete de que não estamos no controle, mas nas mãos do Deus que cuida de nós."
   }
 };
 
