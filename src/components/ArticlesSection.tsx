@@ -19,6 +19,20 @@ const monthMap: Record<string, string> = {
   Dezembro: "12",
 };
 
+const scrollToSection = (sectionId: string) => {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    const headerOffset = 80;
+    const elementPosition = section.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+};
+
 function parsePtDate(ptDate: string) {
   const [day, , month, year] = ptDate.split(" ");
   const monthNumber = monthMap[month.replace(",", "")];
@@ -142,7 +156,10 @@ const ArticlesSection = () => {
           <Button
             variant="outline"
             size="lg"
-            onClick={() => setShowAll(!showAll)}
+            onClick={() => {
+              setShowAll(!showAll);
+              if (showAll) scrollToSection("articles-section");
+            }}
           >
             {showAll ? "Ver Menos Artigos" : "Ver Todos os Artigos"}
             {showAll ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
