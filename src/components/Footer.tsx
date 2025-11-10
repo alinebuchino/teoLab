@@ -12,7 +12,12 @@ const Footer = () => {
             alt="TeoLab"
             className="h-11 object-contain"
           />
-          <h2 className="text-3xl font-bold">TeoLab</h2>
+          <h2
+            className="subheading-sacred"
+            style={{ color: 'black', fontSize: '1.7rem' }}
+          >
+            TeoLab
+          </h2>
         </div>
         <p className="text-center max-w-xl text-sm font-normal leading-relaxed text-primary-foreground/80 mb-4">
           Onde o conhecimento se encontra com a fé, o estudo se torna adoração.
