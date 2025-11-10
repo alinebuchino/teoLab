@@ -19,6 +19,12 @@ const monthMap: Record<string, string> = {
   Dezembro: "12",
 };
 
+function parsePtDate(ptDate: string) {
+  const [day, , month, year] = ptDate.split(" ");
+  const monthNumber = monthMap[month.replace(",", "")];
+  return new Date(`${year}-${monthNumber}-${day}`);
+}
+
 const scrollToSection = (sectionId: string) => {
   const section = document.getElementById(sectionId);
   if (section) {
@@ -33,24 +39,22 @@ const scrollToSection = (sectionId: string) => {
   }
 };
 
-function parsePtDate(ptDate: string) {
-  const [day, , month, year] = ptDate.split(" ");
-  const monthNumber = monthMap[month.replace(",", "")];
-  return new Date(`${year}-${monthNumber}-${day}`);
-}
-
 const ArticlesSection = () => {
-  const [showAll, setShowAll] = useState(false);
   const navigate = useNavigate();
+  const [visibleCount, setVisibleCount] = useState(3);
 
   // Ordena os artigos do mais recente para o mais antigo
   const articles = Object.values(articlesById)
     .filter(Boolean)
     .sort((a, b) => parsePtDate(b.date).getTime() - parsePtDate(a.date).getTime());
 
-  const visibleArticles = showAll ? articles : articles.slice(0, 3);
-
   if (!articles.length) return null;
+
+  // Mostra apenas a quantidade definida
+  const visibleArticles = articles.slice(0, visibleCount);
+
+  // Verifica se ainda há mais artigos para carregar
+  const hasMore = visibleCount < articles.length;
 
   return (
     <section id="articles-section" className="py-20 px-6">
@@ -152,18 +156,30 @@ const ArticlesSection = () => {
           ))}
         </div>
 
+        {/* Botão de carregar mais */}
         <div className="text-center">
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={() => {
-              setShowAll(!showAll);
-              if (showAll) scrollToSection("articles-section");
-            }}
-          >
-            {showAll ? "Ver Menos Artigos" : "Ver Todos os Artigos"}
-            {showAll ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-          </Button>
+          {hasMore ? (
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => setVisibleCount((prev) => prev + 6)}
+            >
+              Ver Mais Artigos
+              <ChevronDown className="w-4 h-4 ml-2" />
+            </Button>
+          ) : (
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => {
+                setVisibleCount(6);
+                scrollToSection("articles-section");
+              }}
+            >
+              Ver Menos Artigos
+              <ChevronUp className="w-4 h-4 ml-2" />
+            </Button>
+          )}
         </div>
       </div>
     </section>

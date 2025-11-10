@@ -2,7 +2,7 @@ import articlesById from "@/artigos/metadatas/allArticlesId";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, Clock } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Clock } from "lucide-react";
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -92,11 +92,11 @@ const ArticlePage = () => {
             <div className="flex items-center justify-between">
               <Button variant="outline"
                 onClick={() => {
-                  navigate("/");
+                  navigate(`/tema/${currentArticle.category}`);
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}>
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Voltar para Início
+                <ArrowRight className="w-4 h-4 mr-2" />
+                Ir para {currentArticle.category}
               </Button>
             </div>
           </div>

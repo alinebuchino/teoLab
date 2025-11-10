@@ -45,7 +45,7 @@ export const articlesMetadata: Record<string, ArticleMetadata> = {
     title: "O Homem Deliberante: Onde o Homem Decide Entre Deus e Seus Ídolos",
     category: "Antropologia",
     date: "05 de Novembro, 2025",
-    readTime: "16 min",
+    readTime: "09 min",
     excerpt: "Uma reflexão profunda sobre o coração humano como o centro das decisões, do autoengano e da batalha espiritual diante de Deus."
   },
   "homem-contingente":{

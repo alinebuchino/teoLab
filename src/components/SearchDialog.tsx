@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import {
   Command,
   CommandDialog,
@@ -9,8 +8,10 @@ import {
   CommandList,
 } from "@/components/ui/command";
 import { DialogTitle } from "@/components/ui/dialog";
-import { Book, Newspaper, Library, FileText } from "lucide-react";
 import { searchableContent, SearchableItem } from "@/data/searchData";
+import { Book, FileText, Library, Newspaper } from "lucide-react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface SearchDialogProps {
   open: boolean;
@@ -28,6 +29,7 @@ const normalizeText = (text: string): string => {
 const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredResults, setFilteredResults] = useState<SearchableItem[]>([]);
+  const navigate = useNavigate();
 
   // Resetar a busca quando o diálogo abre
   useEffect(() => {
@@ -63,9 +65,11 @@ const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
     // Scroll para a seção correspondente
     let sectionId = "";
     if (item.type === "article") {
-      sectionId = "articles-section";
+      navigate(`/artigo/${item.id}`);
+      return;
     } else if (item.type === "theme") {
-      sectionId = "themes-section";
+      navigate(`/tema/${item.category}`);
+      return;
     } else if (item.type === "resource") {
       sectionId = "resources-section";
     }
