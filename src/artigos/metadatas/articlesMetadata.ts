@@ -111,6 +111,30 @@ export const articlesMetadata: Record<string, ArticleMetadata> = {
     date: "13 de Novembro, 2025",
     readTime: "9 min",
     excerpt: "Uma reflexão bíblica sobre a ansiedade como lembrete de que não estamos no controle, mas nas mãos do Deus que cuida de nós."
+  },
+  "irritabilidade":{
+    id: "irritabilidade",
+    title: "Irritabilidade — O domínio próprio diante da ira",
+    category: "Maturidade",
+    date: "14 de Novembro, 2025",
+    readTime: "12 min",
+    excerpt: "Um estudo teológico sobre a ira sob a luz bíblica: quando ela é santa, quando é pecado e como cultivamos o domínio próprio."
+  },
+  "materialismo":{
+    id: "materialismo",
+    title: "Materialismo — Idolatria Moderna",
+    category: "Maturidade",
+    date: "15 de Novembro, 2025",
+    readTime: "05 min",
+    excerpt: "O anseio pela segurança material tem se tornado uma nova forma de idolatria, substituindo a fé na providência divina por uma fé nas riquezas terrenas."
+  },
+  "inveja":{
+    id: "inveja",
+    title: "Inveja e a Teoria Mimética de René Girard",
+    category: "Maturidade",
+    date: "16 de Novembro, 2025",
+    readTime: "06 min",
+    excerpt: "Um estudo sobre como o desejo humano nasce da imitação e como a inveja pode ser transformada pela gratidão e pelo autoesquecimento.",
   }
 };
 

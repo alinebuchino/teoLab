@@ -2,9 +2,14 @@ import ansiedade from "./assets/ansiedade.png";
 import automimo from "./assets/automimo.png";
 import constancia from "./assets/constancia.png";
 import genesis from "./assets/genesis.png";
+import inveja from "./assets/inveja.png";
 import jonas from "./assets/jonas.png";
 import liberdadeVontade from "./assets/liberdadeVontade.png";
+import materialismo from "./assets/materialismo.png";
+import panelaPressao from "./assets/panelaPressao.png";
+import pressao from "./assets/pressao.png";
 import raabe from "./assets/raabe.png";
+import rivalidade from "./assets/rivalidade.png";
 import articlesMetadata from "./metadatas/articlesMetadata";
 
 const Maturidade = [
@@ -560,7 +565,231 @@ const Maturidade = [
                 </p>
             </>
         ),
-    }
+    },
+    {
+        ...articlesMetadata["irritabilidade"],
+        content: (
+            <>
+                <p className="mb-6">
+                    Comecemos nosso estudo teológico sobre <strong>domínio próprio</strong> e <strong>ira</strong> a partir do versículo de <strong>Efésios 4:26–27, 29, 31</strong>:
+                </p>
+
+                <blockquote className="mb-6 pl-4 border-l-4 border-accent italic">
+                    “Quando vocês ficarem irados, não pequem; apaziguem a sua ira antes que o sol se ponha e não deem lugar ao diabo. Nenhuma palavra torpe saia da boca de vocês, mas apenas a que for útil para edificar os outros, conforme a necessidade, para que conceda graça aos que a ouvem. Livrem-se de toda amargura, indignação e ira, gritaria e calúnia, bem como de toda maldade.”
+                </blockquote>
+
+                <p className="mb-6">
+                    Há uma grande diferença entre os tipos de ira, que podemos distinguir como <strong>pecaminosa</strong> ou <strong>não pecaminosa</strong>. Palavras torpes — ou seja, palavras que não produzem edificação, palavras indecentes ou que podem ferir — são fruto da ira pecaminosa.
+                </p>
+
+                <p className="mb-6">
+                    Para exemplificar, podemos citar Esaú e Jacó: Esaú ficou muito bravo com seu irmão ao descobrir que ele havia tomado seu direito de primogenitura e, então, resolveu caçá-lo. O mesmo ocorre com Raquel e Jacó: Raquel ficou furiosa porque Jacó não lhe dava filhos, o que resultou em uma conversa ríspida entre eles, como relatam as Escrituras. Em Gênesis 42, vemos o momento em que José reconhece seus irmãos no Egito — já em posição de poder — e sua primeira reação foi falar rispidamente com eles, de modo nada bondoso. A ira sempre se inicia em nossos corações e se expressa em nossas palavras.
+                </p>
+
+                <img
+                    src={panelaPressao}
+                    alt="Ilustração de ira"
+                    className="rounded-2xl shadow-md my-6 mx-auto w-full max-w-2xl"
+                />
+
+                <p className="mb-6">
+                    Porém, nem toda ira é pecaminosa. A Bíblia nos revela que a <strong>ira de Deus</strong> é manifesta nos céus (podemos ver isso nos versículos apresentados na imagem abaixo). Neemias também nos serve como exemplo santo: ao liderar o povo na reconstrução após o exílio, ele se irou com os mais ricos que estavam subjugando os mais pobres. E o maior exemplo é <strong>Jesus</strong>, que manifestou sua ira contra o pecado e a falta de arrependimento.
+                </p>
+
+                <blockquote className="mb-6 pl-4 border-l-4 border-accent italic">
+                    “Eles gritavam às montanhas e às rochas: ‘Caiam sobre nós e escondam-nos da face daquele que está assentado no trono e da ira do Cordeiro! Pois chegou o grande dia da ira deles; e quem poderá suportar?’” — Apocalipse 6:16–17
+                </blockquote>
+
+                <p className="mb-6">
+                    Ponderemos, então, nossa ira. Não se indignar com a injustiça nos conduz à apatia — e a apatia diante das injustiças, da falta de compaixão e do pecado também é algo pecaminoso. Portanto, o que distinguirá nossa ira será a <strong>direção</strong> em que a utilizamos: se de forma destrutiva ou construtiva.
+                </p>
+
+                <p className="mb-6">
+                    Muitas pessoas se referem à ira como se fôssemos uma panela de pressão — um fluido dentro de nós que, se o fogo estiver alto demais, explode —, dando a impressão de algo incontrolável, que precisa de uma “válvula de escape” ou de um “esvaziamento”.
+                </p>
+
+                <p className="mb-6">
+                    <strong>Mas nós não somos uma panela de pressão.</strong> A ira, na Bíblia, é um <strong>sentimento moral</strong>. Ou seja, ela é ou justa ou injusta, santa ou pecaminosa — dependendo da intenção e/ou da expressão.
+                </p>
+
+                <img
+                    src={pressao}
+                    alt="Ilustração de ira"
+                    className="rounded-2xl shadow-md my-6 mx-auto w-full max-w-2xl"
+                />
+
+                <p className="mb-6">
+                    A ira não é algo neutro e requer ser tratada de forma moral. Se for moral, é louvada por isso; se for imoral, requer arrependimento. Nunca há neutralidade.
+                </p>
+
+                <p className="mb-6">
+                    A Bíblia é radicalmente diferente da glória dos homens. Ela nos ensina como nós, cristãos, devemos agir — como está escrito em:
+                </p>
+
+                <blockquote className="mb-6 pl-4 border-l-4 border-accent italic">
+                    “A sabedoria do homem lhe dá paciência; sua glória é ignorar as ofensas.” — Provérbios 19:11
+                </blockquote>
+
+                <blockquote className="mb-6 pl-4 border-l-4 border-accent italic">
+                    “É a insensatez do homem que arruína a sua vida, mas o seu coração se ira contra o Senhor.” — Provérbios 19:3
+                </blockquote>
+
+                <p className="mb-6">
+                    Por mais que camuflemos a ira com frases como “eu sou assim”, “tive um dia difícil” ou “a pessoa precisa aprender”, precisamos fixar em nosso entendimento que essas atitudes nos provocam a ponto de nos tornarmos diferentes de quem realmente somos. Não somos meros reagentes; somos seres racionais, capazes de agir moralmente — escolhendo o que convém e o que não convém.
+                </p>
+
+                <p className="mb-6">
+                    A <strong>ira é a idolatria do ego</strong>, pois quando ela governa, colocamos a nós mesmos como deuses de nossas próprias vidas. A ira, em si, é algo bom que nos foi dado pelo Senhor — uma motivação para reagirmos diante das injustiças, da falta de misericórdia e daquilo que profana o nome de Deus. O problema está em como a utilizamos.
+                </p>
+
+                <blockquote className="mb-6 pl-4 border-l-4 border-accent italic">
+                    “O tolo dá vazão à sua ira, mas o sábio domina-se.” — Provérbios 29:11
+                </blockquote>
+            </>
+        ),
+    },
+    {
+        ...articlesMetadata["materialismo"],
+        content: (
+            <>
+                <img
+                    src={materialismo}
+                    alt="Ilustração de materlismo"
+                    className="rounded-2xl shadow-md my-6 mx-auto w-full max-w-2xl"
+                />
+                <p className="mb-6">
+                    Comecemos nossa reflexão sobre <strong>materialismo</strong> e fé cristã com uma frase de <strong>Heber Campos Jr</strong>: “O problema não é a coisa em si, é o que a gente busca nela”.
+                </p>
+
+                <p className="mb-6">
+                    Estabilidade financeira tem se tornado o novo alvo de muitos cristãos. No entanto, quando o coração deposita confiança nas posses ou no trabalho — e não no Senhor —, caímos em uma forma sutil de idolatria.
+                    O ídolo promete aquilo que apenas Deus pode conceder.
+                </p>
+
+                <p className="mb-6">
+                    Uma fala muito comum ilustra isso: “Eu não quero ser rico, só quero estabilidade financeira.” Embora pareça inofensiva, ela muitas vezes esconde um desejo de segurança fora de Deus.
+                    Passamos a confiar no nosso emprego, na nossa conta bancária, ou nas oportunidades, esquecendo que é o Senhor quem provê tudo isso.
+                </p>
+
+                <blockquote className="mb-6 pl-4 border-l-4 border-accent italic">
+                    “Alguns confiam em carros de guerra, outros em cavalos; nós, porém, confiamos no nome do SENHOR, o nosso Deus.” — Salmos 20:7
+                </blockquote>
+
+                <p className="mb-6">
+                    A maturidade cristã exige de nós desapego. A idolatria do dinheiro é uma das mais difíceis de combater, pois se disfarça de prudência e responsabilidade.
+                    Não há problema em possuir bens — o erro está quando os bens passam a possuir o nosso coração.
+                </p>
+
+                <p className="mb-6">
+                    Na parábola do homem rico, Jesus critica o acúmulo egoísta. O problema não está no celeiro cheio, mas no coração que busca segurança naquilo que acumula.
+                    Quando nossa alegria e paz dependem de coisas, perdemos a verdadeira liberdade que Cristo oferece.
+                </p>
+
+                <p className="mb-6">
+                    Portanto, o objetivo do cristão não é apenas “ter boas condições”, mas ser santo como Cristo.
+                    Se há prosperidade, que ela seja usada para a glória de Deus — reconhecendo que é Ele quem nos concede o trabalho, as oportunidades e até mesmo o sustento.
+                </p>
+
+                <p className="mb-6">
+                    Às vezes, o Senhor permite que tenhamos mais — não como recompensa, mas como prova de amor e confiança.
+                    Ele sabe o que pode habitar nosso coração sem nos corromper.
+                </p>
+
+                <p className="mb-6">
+                    Que vigiemos nossa mente e nosso coração, para que o dinheiro e os bens sejam servos da nossa fé — e nunca senhores dela.
+                </p>
+
+                <blockquote className="mb-6 pl-4 border-l-4 border-accent italic">
+                    “Observem as aves do céu: não semeiam nem colhem nem armazenam em celeiros; contudo, o Pai celestial as alimenta. Não têm vocês muito mais valor do que elas?” — Mateus 6:26
+                </blockquote>
+
+            </>
+        ),
+    },
+    {
+        ...articlesMetadata["inveja"],
+        content: (
+            <>
+                <img
+                    src={rivalidade}
+                    alt="Ilustração de inveja"
+                    className="rounded-2xl shadow-md my-6 mx-auto w-full max-w-2xl"
+                />
+
+                <p className="mb-6">
+                    Comecemos nosso estudo a partir da <strong>teoria mimética de René Girard</strong>, que se baseia no conceito de <strong>imitação</strong>.
+                    Essa teoria nos ensina que o ser humano age, em essência, por meio da imitação — nossos desejos, comportamentos e ambições são profundamente moldados por aquilo que vemos nos outros.
+                </p>
+
+                <p className="mb-6">
+                    Na estrutura proposta por Girard, temos três elementos principais:
+                </p>
+
+                <ul className="list-disc pl-6 mb-6">
+                    <li><strong>Sujeito</strong>: a pessoa que imita o outro, movida pela admiração.</li>
+                    <li><strong>Mediador</strong>: aquele que é imitado ou admirado.</li>
+                    <li><strong>Objeto</strong>: aquilo que é desejado no outro — não necessariamente algo físico, mas também sabedoria, status, inteligência ou reconhecimento.</li>
+                </ul>
+
+                <p className="mb-6">
+                    René Girard afirma que raramente desejamos algo por si só.
+                    O desejo nasce quando o objeto está atrelado a alguém — nós não apenas imitamos o comportamento do outro, mas também <strong>o seu desejo</strong>.
+                    Assim, a inveja não é simplesmente querer o que o outro tem, mas desejar <em>ser</em> o outro.
+                </p>
+
+                <img
+                    src={inveja}
+                    alt="Ilustração de inveja"
+                    className="rounded-2xl shadow-md my-6 mx-auto w-full max-w-2xl"
+                />
+
+                <p className="mb-6">
+                    A imitação em si não é má. Afinal, somos chamados a imitar a Cristo.
+                    O problema surge quando a imitação se transforma em rivalidade, quando deixamos de admirar e passamos a competir.
+                    É nesse ponto que o desejo mimético se corrompe e nasce a inveja.
+                </p>
+
+                <p className="mb-6">
+                    No <strong>Jardim do Éden</strong>, o primeiro pecado humano foi justamente a inveja de Deus — o desejo de ser como Ele.
+                    O homem não se contentou em ser à imagem e semelhança do Criador, mas quis <em>ser</em> o próprio Deus, o conhecedor do bem e do mal.
+                    A inveja, portanto, é uma distorção da imitação divina.
+                </p>
+
+                <blockquote className="mb-6 pl-4 border-l-4 border-accent italic">
+                    “A saída da inveja sempre será o autoesquecimento e a autodoação.”
+                </blockquote>
+
+                <p className="mb-6">
+                    Em <strong>1 Samuel 1:1–18</strong>, vemos um exemplo profundo dessa verdade na história de <strong>Ana e Penina</strong>.
+                    Penina tinha filhos, e Ana não — e isso a provocava profundamente.
+                    Cansada da dor e da comparação, Ana orou ao Senhor, pedindo um filho e prometendo entregá-lo a Ele.
+                    Após a oração, seu semblante mudou: ela voltou a se alimentar e já não estava triste.
+                </p>
+
+                <p className="mb-6">
+                    Ana encontrou <strong>paz antes da resposta</strong>.
+                    Sua oração não era mais sobre o filho, mas sobre o descanso da alma.
+                    Ela compreendeu que não precisava possuir o que Penina tinha para encontrar contentamento.
+                </p>
+
+                <p className="mb-6">
+                    A inveja é sempre sobre <strong>ser</strong>, e nunca apenas sobre <strong>ter</strong>.
+                    Quando abandonamos a fixação de que o objeto desejado nos fará “ser alguém”, encontramos verdadeira liberdade.
+                    O autoesquecimento e a gratidão são os caminhos que nos libertam da rivalidade e da comparação.
+                </p>
+
+                <p className="mb-6">
+                    Portanto, precisamos constantemente pedir a Deus <strong>perdão e gratidão</strong> — perdão pelas vezes em que desejamos o lugar do outro, e gratidão pela vida que Ele nos concedeu.
+                    O contentamento é a cura da inveja.
+                </p>
+
+                <blockquote className="mb-6 pl-4 border-l-4 border-accent italic">
+                    “O mundo ideal frustrado nos faz duelar com Deus — e todo pecado é uma luta com Ele, onde só ganhamos quando Ele vence.”
+                </blockquote>
+
+            </>
+        ),
+    },
 ]
 
 export default Maturidade;
