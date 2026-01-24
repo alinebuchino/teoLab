@@ -11,6 +11,7 @@ export interface SearchableItem {
   keywords?: string[];
   date?: string;
   readTime?: string;
+  parentId?: string;
 }
 
 const articleItems: SearchableItem[] = Object.values(articlesMetadata).map(
@@ -32,7 +33,8 @@ const themeItems: SearchableItem[] = Object.values(themesMetadata).map(
     description: theme.description,
     category: theme.category,
     type: "theme",
-    keywords: theme.keywords
+    keywords: theme.keywords,
+    parentId: theme.parentId
   })
 );
 

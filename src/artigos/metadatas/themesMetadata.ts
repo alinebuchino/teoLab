@@ -1,7 +1,9 @@
-import biblicalStudiesIcon from "@/assets/biblical-studies-icon.jpg";
-import christologyIcon from "@/assets/christology-icon.jpg";
-import doctrineIcon from "@/assets/doctrine-icon.jpg";
-import eschatologyIcon from "@/assets/eschatology-icon.jpg";
+import apologeticaIcon from "@/assets/apologetica-icon.jpg";
+import cristaoIcon from "@/assets/cristao-icon.jpg";
+import evangelhoIcon from "@/assets/evangelho-icon.jpg";
+import maturidadeIcon from "@/assets/maturidade-icon.jpg";
+import primeirosPassosIcon from "@/assets/primeiros-passos-icon.jpg";
+import propedeuticaIcon from "@/assets/propedeutica-icon.jpg";
 import theologyIcon from "@/assets/theology-hero.jpg";
 
 export interface ThemeMetadata {
@@ -12,6 +14,7 @@ export interface ThemeMetadata {
   image: string;
   color: "primary" | "accent" | "warm";
   keywords?: string[];
+  parentId?: string;
 }
 
 const themesMetadata: Record<string, ThemeMetadata> = {
@@ -21,9 +24,29 @@ const themesMetadata: Record<string, ThemeMetadata> = {
     description:
       "Interpretações biblicas fundamentais do evangelho e do cristão para iniciar a jornada cristã com firmeza na fé.",
     category: "Início",
-    image: biblicalStudiesIcon,
+    image: primeirosPassosIcon,
     color: "accent",
     keywords: ["primeiros passos", "vida cristã", "maturidade cristã"]
+  },
+  "theme-1-evangelho": {
+    id: "theme-1-evangelho",
+    title: "O Evangelho",
+    description: "A mensagem central da salvação e o sacrifício de Cristo.",
+    category: "Evangelho",
+    parentId: "theme-1", // Vincula ao Início
+    image: evangelhoIcon,
+    color: "accent",
+    keywords: ["boas novas", "salvação"]
+  },
+  "theme-1-cristao": {
+    id: "theme-1-cristao",
+    title: "A vida do Cristão",
+    description: "A identidade e o caráter daquele que segue a Cristo.",
+    category: "Cristão",
+    parentId: "theme-1", // Vincula ao Início
+    image: cristaoIcon,
+    color: "accent",
+    keywords: ["identidade", "discípulo"]
   },
   "theme-2": {
     id: "theme-2",
@@ -31,7 +54,7 @@ const themesMetadata: Record<string, ThemeMetadata> = {
     description:
       "O crescimento contínuo da fé, caráter e vida espiritual rumo à semelhança com Cristo.",
     category: "Maturidade",
-    image: christologyIcon,
+    image: maturidadeIcon,
     color: "accent",
     keywords: ["maturidade", "crescimento", "vida espiritual"]
   },
@@ -41,7 +64,7 @@ const themesMetadata: Record<string, ThemeMetadata> = {
     description:
       "A porta de entrada para compreender Deus, preparando mente e coração para a jornada da fé.",
     category: "Propedêutica",
-    image: doctrineIcon,
+    image: propedeuticaIcon,
     color: "primary",
     keywords: ["propedêutica", "teologia", "fundamentos"]
   },
@@ -61,7 +84,7 @@ const themesMetadata: Record<string, ThemeMetadata> = {
     description:
       "Defesa inteligente da fé cristã, usando razão e clareza para comunicar a verdade de Deus.",
     category: "Apologética",
-    image: eschatologyIcon,
+    image: apologeticaIcon,
     color: "warm",
     keywords: ["apologética", "defesa da fé", "razão", "verdade de Deus"]
   },

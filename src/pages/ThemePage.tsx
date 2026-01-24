@@ -1,12 +1,13 @@
 import articlesById from "@/artigos/metadatas/allArticlesId";
+import themesMetadata from "@/artigos/metadatas/themesMetadata";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import ThemeCard from "@/components/ThemeCard";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-// Mapeamento de meses em português para número
 const monthMap: Record<string, string> = {
   Janeiro: "01",
   Fevereiro: "02",
@@ -22,7 +23,6 @@ const monthMap: Record<string, string> = {
   Dezembro: "12",
 };
 
-// Função para converter data em português para objeto Date
 function parsePtDate(ptDate: string) {
   const [day, , month, year] = ptDate.split(" ");
   const monthNumber = monthMap[month.replace(",", "")];
@@ -35,33 +35,21 @@ const ThemePage = () => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+  }, [theme]);
 
-  const articlesByTheme: Record<string, string[]> = {};
-  const themeNames: Record<string, string> = {};
-
-  Object.values(articlesById).forEach(article => {
-    const themeSlug = article.category;
-
-    if (!articlesByTheme[themeSlug]) {
-      articlesByTheme[themeSlug] = [];
-      themeNames[themeSlug] = article.category;
-    }
-
-    articlesByTheme[themeSlug].push(article.id);
-  });
-
-  // Pega os artigos do tema atual (slug da URL)
-  const currentTheme = theme || "";
-  const themeArticleIds = articlesByTheme[currentTheme] || [];
-  let articles = themeArticleIds.map(id => articlesById[id]).filter(Boolean);
-
-  // Ordena os artigos do mais recente para o mais antigo
-  articles = articles.sort(
-    (a, b) => parsePtDate(b.date).getTime() - parsePtDate(a.date).getTime()
+  const currentThemeData = Object.values(themesMetadata).find(
+    (t) => t.category === theme || t.id === theme
   );
 
-  const themeName = themeNames[currentTheme] || "Tema";
+  const subThemes = Object.values(themesMetadata).filter(
+    (t) => t.parentId === currentThemeData?.id
+  );
+
+  const themeName = currentThemeData?.title || theme || "Tema";
+
+  const articles = Object.values(articlesById)
+    .filter((article) => article.category === theme)
+    .sort((a, b) => parsePtDate(b.date).getTime() - parsePtDate(a.date).getTime());
 
   return (
     <div className="min-h-screen">
@@ -83,11 +71,29 @@ const ThemePage = () => {
               {themeName}
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore todos os artigos relacionados a {themeName.toLowerCase()}
+              Explore o conteúdo de {themeName.toLowerCase()}
             </p>
           </div>
 
-          {articles.length > 0 ? (
+          {subThemes.length > 0 ? (
+            <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+              {subThemes.map((sub, index) => (
+                <div
+                  key={sub.id}
+                  className="animate-fade-in w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] max-w-[380px]"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <ThemeCard
+                    title={sub.title}
+                    description={sub.description}
+                    image={sub.image}
+                    category={sub.category}
+                    color={sub.color}
+                  />
+                </div>
+              ))}
+            </div>
+          ) : articles.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {articles.map((article, index) => (
                 <article
@@ -125,7 +131,6 @@ const ThemePage = () => {
                     variant="ghost"
                     size="sm"
                     className="mt-4 w-full group-hover:text-accent"
-                    onClick={() => navigate(`/artigo/${article.id}`)}
                   >
                     Ler Artigo
                   </Button>
@@ -135,7 +140,7 @@ const ThemePage = () => {
           ) : (
             <div className="text-center py-20">
               <p className="text-muted-foreground text-lg">
-                Nenhum artigo encontrado para este tema.
+                Nenhum conteúdo encontrado para este tema.
               </p>
             </div>
           )}
