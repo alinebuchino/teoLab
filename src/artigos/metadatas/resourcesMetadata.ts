@@ -14,16 +14,6 @@ export interface ResourceMetadata {
 const resourcesMetadata: Record<string, ResourceMetadata> = {
   "resource-1": {
     id: "resource-1",
-    title: "Livro: Confissões - Agostinho de Hipona",
-    description: "Uma jornada íntima da alma do pecado à graça, onde o coração inquieto encontra repouso em Deus.",
-    type: "book",
-    icon: Book,
-    color: "warm",
-    url: "https://www.mercadolivre.com.br/livro-confissoes-de-santo-agostinho-de-santo-agostinho-editora-schwarcz-sa-capa-mole-2017/p/MLB19421267",
-    keywords: ["livro", "agostinho", "confissões", "graça", "pecado"]
-  },
-  "resource-2": {
-    id: "resource-2",
     title: "Livro: Inteligência Humilhada - Jonas Madureira",
     description: "O conceito de inteligência humilhada que visa estimular o interesse por uma razão que ora e uma fé que pensa.",
     type: "book",
@@ -31,6 +21,16 @@ const resourcesMetadata: Record<string, ResourceMetadata> = {
     color: "warm",
     url: "https://www.mercadolivre.com.br/inteligncia-humilhada-livro-jonas-madureira-vida-nova/p/MLB19889408",
     keywords: ["livro", "inteligência", "humilhada", "fé", "razão"]
+  },
+  "resource-2": {
+    id: "resource-2",
+    title: "Livro: O Banqueto do Cordeiro",
+    description: "Uma jornada que evidencia a beleza e profundidade da Santa Missa, revelando sua essência através da visão de um especialista nas Sagradas Escrituras.",
+    type: "book",
+    icon: Book,
+    color: "warm",
+    url: "https://www.mercadolivre.com.br/livro-catolico-o-banquete-do-cordeiro/up/MLBU2363023268",
+    keywords: ["livro", "cordeiro", "missa", "graça", "eucarístia"]
   },
   "resource-3": {
     id: "resource-3",

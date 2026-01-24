@@ -1,6 +1,5 @@
 import biblicalStudiesIcon from "@/assets/biblical-studies-icon.jpg";
 import christologyIcon from "@/assets/christology-icon.jpg";
-import churchHistoryIcon from "@/assets/church-history-icon.jpg";
 import doctrineIcon from "@/assets/doctrine-icon.jpg";
 import eschatologyIcon from "@/assets/eschatology-icon.jpg";
 import theologyIcon from "@/assets/theology-hero.jpg";
@@ -18,13 +17,13 @@ export interface ThemeMetadata {
 const themesMetadata: Record<string, ThemeMetadata> = {
   "theme-1": {
     id: "theme-1",
-    title: "Propedêutica Teológica",
+    title: "Primeiros Passos",
     description:
-      "A porta de entrada para compreender Deus, preparando mente e coração para a jornada da fé.",
-    category: "Propedêutica",
-    image: doctrineIcon,
-    color: "primary",
-    keywords: ["propedêutica", "teologia", "fundamentos"]
+      "Interpretações biblicas fundamentais do evangelho e do cristão para iniciar a jornada cristã com firmeza na fé.",
+    category: "Início",
+    image: biblicalStudiesIcon,
+    color: "accent",
+    keywords: ["primeiros passos", "vida cristã", "maturidade cristã"]
   },
   "theme-2": {
     id: "theme-2",
@@ -38,6 +37,16 @@ const themesMetadata: Record<string, ThemeMetadata> = {
   },
   "theme-3": {
     id: "theme-3",
+    title: "Propedêutica Teológica",
+    description:
+      "A porta de entrada para compreender Deus, preparando mente e coração para a jornada da fé.",
+    category: "Propedêutica",
+    image: doctrineIcon,
+    color: "primary",
+    keywords: ["propedêutica", "teologia", "fundamentos"]
+  },
+  "theme-4": {
+    id: "theme-4",
     title: "Antropologia Bíblica",
     description:
       "O estudo do ser humano à luz das Escrituras, revelando sua natureza, propósito e relação com Deus.",
@@ -46,8 +55,8 @@ const themesMetadata: Record<string, ThemeMetadata> = {
     color: "primary",
     keywords: ["história", "cristianismo", "igreja", "reforma", "concílios"]
   },
-  "theme-4": {
-    id: "theme-4",
+  "theme-5": {
+    id: "theme-5",
     title: "Apologética Cristã",
     description:
       "Defesa inteligente da fé cristã, usando razão e clareza para comunicar a verdade de Deus.",
@@ -56,25 +65,15 @@ const themesMetadata: Record<string, ThemeMetadata> = {
     color: "warm",
     keywords: ["apologética", "defesa da fé", "razão", "verdade de Deus"]
   },
-  "theme-5": {
-    id: "theme-5",
-    title: "Estudos Bíblicos",
-    description:
-      "Métodos de interpretação bíblica e análise exegética das Escrituras.",
-    category: "Hermenêutica",
-    image: biblicalStudiesIcon,
-    color: "accent",
-    keywords: ["estudos bíblicos", "exegese", "interpretação", "escrituras", "análise"]
-  },
-  "theme-6": {
-    id: "theme-6",
-    title: "História da Igreja",
-    description: "Jornada através dos marcos históricos do cristianismo através dos séculos.",
-    category: "História",
-    image: churchHistoryIcon,
-    color: "primary",
-    keywords: ["história", "cristianismo", "igreja", "reforma", "concílios"]
-  }
+  // "theme-6": {
+  //   id: "theme-6",
+  //   title: "História da Igreja",
+  //   description: "Jornada através dos marcos históricos do cristianismo através dos séculos.",
+  //   category: "História",
+  //   image: churchHistoryIcon,
+  //   color: "primary",
+  //   keywords: ["história", "cristianismo", "igreja", "reforma", "concílios"]
+  // }
 };
 
 export default themesMetadata;
