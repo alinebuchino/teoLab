@@ -135,6 +135,14 @@ export const articlesMetadata: Record<string, ArticleMetadata> = {
     date: "16 de Novembro, 2025",
     readTime: "06 min",
     excerpt: "Um estudo sobre como o desejo humano nasce da imitação e como a inveja pode ser transformada pela gratidão e pelo autoesquecimento.",
+  },
+  "evangelho-oque-e":{
+    id: "evangelho-oque-e",
+    title: "O que é o Evangelho?",
+    category: "Evangelho",
+    date: "24 de Janeiro, 2026",
+    readTime: "12 min",
+    excerpt: "Uma reflexão sobre o significado do evangelho e sua importância para a fé cristã."
   }
 };
 

@@ -1,11 +1,13 @@
 import Antropologia from "../Antropologia";
+import Evangelho from "../Evangelho";
 import Maturidade from "../Maturidade";
 import Propedeutica from "../Propedeutica";
 
 const allArticles = [
+  ...Evangelho,
+  ...Maturidade,
   ...Propedeutica,
   ...Antropologia,
-  ...Maturidade
   // ...outros artigos
 ];
 
