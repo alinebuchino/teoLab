@@ -28,7 +28,17 @@ const themesMetadata: Record<string, ThemeMetadata> = {
     color: "accent",
     keywords: ["primeiros passos", "vida cristã", "maturidade cristã"]
   },
-  "theme-1-evangelho": {
+  "theme-1-cristao": {
+    id: "theme-1-cristao",
+    title: "A vida do Cristão",
+    description: "A identidade e o caráter daquele que segue a Cristo.",
+    category: "Cristao",
+    parentId: "theme-1", // Vincula ao Início
+    image: cristaoIcon,
+    color: "accent",
+    keywords: ["identidade", "discípulo"]
+  },
+    "theme-1-evangelho": {
     id: "theme-1-evangelho",
     title: "O Evangelho",
     description: "A mensagem central da salvação e o sacrifício de Cristo.",
@@ -37,16 +47,6 @@ const themesMetadata: Record<string, ThemeMetadata> = {
     image: evangelhoIcon,
     color: "accent",
     keywords: ["boas novas", "salvação"]
-  },
-  "theme-1-cristao": {
-    id: "theme-1-cristao",
-    title: "A vida do Cristão",
-    description: "A identidade e o caráter daquele que segue a Cristo.",
-    category: "Cristão",
-    parentId: "theme-1", // Vincula ao Início
-    image: cristaoIcon,
-    color: "accent",
-    keywords: ["identidade", "discípulo"]
   },
   "theme-2": {
     id: "theme-2",

@@ -183,7 +183,39 @@ export const articlesMetadata: Record<string, ArticleMetadata> = {
     date: "29 de Janeiro, 2026",
     readTime: "8 min",
     excerpt: "Jesus é verdadeiramente Deus e Senhor, mostrando que não existe salvação sem submissão ao Seu senhorio, e que a fé genuína necessariamente transforma a vida do cristão."
-  }
+  },
+    "identidade-cristao":{
+    id: "identidade-cristao",
+    title: "Identidade do Cristão",
+    category: "Cristao",
+    date: "30 de Janeiro, 2026",
+    readTime: "12 min",
+    excerpt: "Uma reflexão sobre a identidade do cristão em Cristo, destacando a nova vida, o pertencimento ao povo de Deus, o chamado para a santidade e o testemunho no mundo."
+  },
+  "ouvir-deus":{
+    id: "ouvir-deus",
+    title: "Ouvir a Deus",
+    category: "Cristao",
+    date: "31 de Janeiro, 2026",
+    readTime: "10 min",
+    excerpt: "Um ensino bíblico que afirma a Escritura como a forma principal, segura e suficiente de ouvir a voz de Deus na vida cristã."
+  },
+    "ouvir-outros":{
+    id: "ouvir-outros",
+    title: "Ouvir aos Outros",
+    category: "Cristao",
+    date: "01 de Fevereiro, 2026",
+    readTime: "6 min",
+    excerpt: "Um ensino sobre a importância bíblica da escuta humilde como parte essencial da comunhão, do discipulado e da maturidade cristã."
+  },
+  "ouvir-mundo":{
+    id: "ouvir-mundo",
+    title: "Ouvir ao Mundo",
+    category: "Cristao",
+    date: "02 de Fevereiro, 2026",
+    readTime: "3 min",
+    excerpt: "Uma reflexão sobre como ouvir o mundo com discernimento, sem absorver seus valores, para anunciar o evangelho com fidelidade e amor."
+  },
 };
 
 export default articlesMetadata;
