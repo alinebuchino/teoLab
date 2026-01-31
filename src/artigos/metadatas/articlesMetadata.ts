@@ -143,6 +143,46 @@ export const articlesMetadata: Record<string, ArticleMetadata> = {
     date: "24 de Janeiro, 2026",
     readTime: "12 min",
     excerpt: "Uma reflexão sobre o significado do evangelho e sua importância para a fé cristã."
+  },
+  "paradoxo":{
+    id: "paradoxo",
+    title: "Paradoxo Humano - Pó e Glória",
+    category: "Evangelho",
+    date: "25 de Janeiro, 2026",
+    readTime: "6 min",
+    excerpt: "Uma reflexão sobre a natureza paradoxal do ser humano como pó e glória diante de Deus."
+  },
+  "salvacao":{
+    id: "salvacao",
+    title: "Salvação: A verdadeira liberdade",
+    category: "Evangelho",
+    date: "26 de Janeiro, 2026",
+    readTime: "5 min",
+    excerpt: "Uma reflexão teológica sobre a salvação como libertação integral do pecado, do ego e do medo, e como chamado para uma nova vida em Cristo."
+  },
+    "cristo-cruz":{
+    id: "cristo-cruz",
+    title: "Cristo e a Cruz",
+    category: "Evangelho",
+    date: "27 de Janeiro, 2026",
+    readTime: "7 min",
+    excerpt: "Uma reflexão sobre a centralidade de Cristo e da cruz na fé cristã, destacando o significado do sacrifício de Jesus para a redenção da humanidade."
+  },
+    "ressureicao":{
+    id: "ressureicao",
+    title: "Ressurreição de Cristo",
+    category: "Evangelho",
+    date: "28 de Janeiro, 2026",
+    readTime: "10 min",
+    excerpt: "Uma reflexão sobre a centralidade da ressurreição de Cristo na fé cristã, destacando o significado da vitória sobre a morte e o início da nova criação."
+  },
+    "senhorio":{
+    id: "senhorio",
+    title: "Senhorio de Cristo",
+    category: "Evangelho",
+    date: "29 de Janeiro, 2026",
+    readTime: "8 min",
+    excerpt: "Jesus é verdadeiramente Deus e Senhor, mostrando que não existe salvação sem submissão ao Seu senhorio, e que a fé genuína necessariamente transforma a vida do cristão."
   }
 };
 
