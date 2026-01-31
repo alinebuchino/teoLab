@@ -1,10 +1,10 @@
-# ✝️ TeoLab - Teologia Cristã
+<h1 align="center">✝️ TeoLab - Teologia Cristã</h1>
 
 > Um espaço para reflexão cristã, maturidade espiritual e formação teológica sólida — com profundidade bíblica e linguagem acessível.
 
 ---
 
-## 📖 Sobre o projeto
+<h2 align="center">👩🏻‍💻 Sobre o projeto</h2>
 
 **TeoLab** é um site de artigos e estudos teológicos que busca unir **razão e fé**, explorando temas como maturidade cristã, virtudes espirituais, vícios modernos e a restauração da imagem de Cristo em nós.
 
@@ -12,7 +12,7 @@ Cada texto é fruto de reflexão bíblica e teológica, com base nas Escrituras 
 
 ---
 
-## 🧭 Estrutura dos Artigos
+<h2 align="center">🧩 Estrutura dos Artigos</h2>
 
 Os artigos estão organizados em um formato espiritual e pedagógico, guiando o leitor por temas fundamentais da vida cristã:
 
@@ -24,7 +24,7 @@ Os artigos estão organizados em um formato espiritual e pedagógico, guiando o 
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+<h2 align="center">🛠️ Tecnologias Utilizadas</h2>
 
 O projeto foi desenvolvido com tecnologias modernas de frontend, garantindo performance e uma experiência de leitura fluida:
 
