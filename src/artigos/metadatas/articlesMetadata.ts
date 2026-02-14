@@ -215,6 +215,38 @@ export const articlesMetadata: Record<string, ArticleMetadata> = {
     date: "02 de Fevereiro, 2026",
     readTime: "3 min",
     excerpt: "Uma reflexão sobre como ouvir o mundo com discernimento, sem absorver seus valores, para anunciar o evangelho com fidelidade e amor."
+  }, 
+  "mente-emocao":{
+    id: "mente-emocao",
+    title: "Mente e Emocão",
+    category: "Cristao",
+    date: "11 de Fevereiro, 2026",
+    readTime: "6 min",
+    excerpt: "Uma reflexão sobre a relação entre mente e emoção, evidenciando que ambas devem estar submetidas a Deus, evitando os extremos do emocionalismo e do racionalismo."
+  }, 
+  "direcao-vocacao":{
+    id: "direcao-vocacao",
+    title: "Direção e Vocação",
+    category: "Cristao",
+    date: "12 de Fevereiro, 2026",
+    readTime: "10 min",
+    excerpt: "Uma reflexão sobre como discernir a vontade de Deus — universal e específica - distinguindo a vontade universal de Deus do chamado específico para cada cristão."
+  },
+  "ministerio":{
+    id: "ministerio",
+    title: "Ministério Cristão",
+    category: "Cristao",
+    date: "13 de Fevereiro, 2026",
+    readTime: "13 min",
+    excerpt: "Uma reflexão sobre o chamado ao ministério — entendido como serviço — e o entendimento sobre distribuição de diferentes dons para que cada um O glorifique em diversas áreas da Igreja e da sociedade."
+  },
+  "fruto-espirito":{
+    id: "fruto-espirito",
+    title: "Fruto do Espírito",
+    category: "Cristao",
+    date: "14 de Fevereiro, 2026",
+    readTime: "9 min",
+    excerpt: "Uma reflexão sobre a verdadeira marca do discípulo é o fruto do Espírito, evidenciado por uma vida transformada, marcada pelo amor e por uma santidade progressiva."
   },
 };
 
